@@ -302,29 +302,29 @@
     });
   });
 
-  /* ---------- Category pill hover dropdown (products.html) ---------- */
-  var ptPillLink = $('#ptPillLink');
-  var ptDrop = $('#ptDrop');
-  if (ptPillLink && ptDrop) {
-    var ptCloseTimer = null;
-    function ptOpen() {
-      clearTimeout(ptCloseTimer);
-      var r = ptPillLink.getBoundingClientRect();
-      ptDrop.style.top = (r.bottom + 8) + 'px';
-      ptDrop.style.left = r.left + 'px';
-      ptDrop.classList.add('is-open');
+  /* ---------- Category pill hover dropdowns (products.html) ---------- */
+  $$('.cat-pill-link[data-pill-drop]').forEach(function (link) {
+    var drop = document.querySelector('.cat-pill__drop[data-pill-drop-menu="' + link.getAttribute('data-pill-drop') + '"]');
+    if (!drop) return;
+    var closeTimer = null;
+    function open() {
+      clearTimeout(closeTimer);
+      var r = link.getBoundingClientRect();
+      drop.style.top = (r.bottom + 8) + 'px';
+      drop.style.left = r.left + 'px';
+      drop.classList.add('is-open');
     }
-    function ptScheduleClose() {
-      clearTimeout(ptCloseTimer);
-      ptCloseTimer = setTimeout(function () { ptDrop.classList.remove('is-open'); }, 150);
+    function scheduleClose() {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(function () { drop.classList.remove('is-open'); }, 150);
     }
-    ptPillLink.addEventListener('mouseenter', ptOpen);
-    ptPillLink.addEventListener('focus', ptOpen);
-    ptPillLink.addEventListener('mouseleave', ptScheduleClose);
-    ptDrop.addEventListener('mouseenter', function () { clearTimeout(ptCloseTimer); });
-    ptDrop.addEventListener('mouseleave', ptScheduleClose);
-    ptDrop.addEventListener('focusout', ptScheduleClose);
-  }
+    link.addEventListener('mouseenter', open);
+    link.addEventListener('focus', open);
+    link.addEventListener('mouseleave', scheduleClose);
+    drop.addEventListener('mouseenter', function () { clearTimeout(closeTimer); });
+    drop.addEventListener('mouseleave', scheduleClose);
+    drop.addEventListener('focusout', scheduleClose);
+  });
 
   /* ---------- Floating category side-nav (products.html) ---------- */
   var catSide = $('#catSide');
