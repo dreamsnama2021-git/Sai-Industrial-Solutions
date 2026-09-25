@@ -1,0 +1,401 @@
+[
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Taper Lock Pulley",
+    "slug": "taper-lock-pulley",
+    "file": "assets/img/products/taper-lock-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Pilot Bore Pulley",
+    "slug": "pilot-bore-pulley",
+    "file": "assets/img/products/pilot-bore-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Timing Belt Pulley",
+    "slug": "timing-belt-pulley",
+    "file": "assets/img/products/timing-belt-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Variable Pulley",
+    "slug": "variable-pulley",
+    "file": "assets/img/products/variable-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Flat Belt Pulley",
+    "slug": "flat-belt-pulley",
+    "file": "assets/img/products/flat-belt-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Chain Pulley",
+    "slug": "chain-pulley",
+    "file": "assets/img/products/chain-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Multi Groove Pulley",
+    "slug": "multi-groove-pulley",
+    "file": "assets/img/products/multi-groove-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Step Pulley",
+    "slug": "step-pulley",
+    "file": "assets/img/products/step-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Wire Rope Pulley",
+    "slug": "wire-rope-pulley",
+    "file": "assets/img/products/wire-rope-pulley.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "V Belt",
+    "slug": "v-belt",
+    "file": "assets/img/products/v-belt.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Timing Belt",
+    "slug": "timing-belt",
+    "file": "assets/img/products/timing-belt.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Simple Sprocket",
+    "slug": "simple-sprocket",
+    "file": "assets/img/products/simple-sprocket.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Duplex Sprocket",
+    "slug": "duplex-sprocket",
+    "file": "assets/img/products/duplex-sprocket.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Triplex Sprocket",
+    "slug": "triplex-sprocket",
+    "file": "assets/img/products/triplex-sprocket.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Double Single Sprocket",
+    "slug": "double-single-sprocket",
+    "file": "assets/img/products/double-single-sprocket.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Roller Chain",
+    "slug": "roller-chain",
+    "file": "assets/img/products/roller-chain.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Attachment Chains",
+    "slug": "attachment-chains",
+    "file": "assets/img/products/attachment-chains.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "QD Bushing",
+    "slug": "qd-bushing",
+    "file": "assets/img/products/qd-bushing.jpg"
+  },
+  {
+    "category": "power-transmission",
+    "categoryName": "Power Transmission Products",
+    "name": "Taper Lock Bush",
+    "slug": "taper-lock-bush",
+    "file": "assets/img/products/taper-lock-bush.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Flexible Coupling (Type 1)",
+    "slug": "flexible-coupling-type-1",
+    "file": "assets/img/products/flexible-coupling-type-1.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Flexible Coupling (Type 2)",
+    "slug": "flexible-coupling-type-2",
+    "file": "assets/img/products/flexible-coupling-type-2.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Flexible Coupling (Type 3)",
+    "slug": "flexible-coupling-type-3",
+    "file": "assets/img/products/flexible-coupling-type-3.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Flexible Coupling (Type 4)",
+    "slug": "flexible-coupling-type-4",
+    "file": "assets/img/products/flexible-coupling-type-4.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Grid Coupling",
+    "slug": "grid-coupling",
+    "file": "assets/img/products/grid-coupling.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Tyre Coupling",
+    "slug": "tyre-coupling",
+    "file": "assets/img/products/tyre-coupling.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Foot Mounted Motor",
+    "slug": "foot-mounted-motor",
+    "file": "assets/img/products/foot-mounted-motor.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Flange Mounted Motor",
+    "slug": "flange-mounted-motor",
+    "file": "assets/img/products/flange-mounted-motor.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Right Angle Gearbox",
+    "slug": "right-angle-gearbox",
+    "file": "assets/img/products/right-angle-gearbox.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Flange Mounted Gearbox",
+    "slug": "flange-mounted-gearbox",
+    "file": "assets/img/products/flange-mounted-gearbox.jpg"
+  },
+  {
+    "category": "couplings-gear",
+    "categoryName": "Couplings and Gear Components",
+    "name": "Shaft Mounted Gearbox",
+    "slug": "shaft-mounted-gearbox",
+    "file": "assets/img/products/shaft-mounted-gearbox.jpg"
+  },
+  {
+    "category": "mechanical-seals",
+    "categoryName": "Mechanical Seals & Accessories",
+    "name": "Mechanical Seals",
+    "slug": "mechanical-seals",
+    "file": "assets/img/products/mechanical-seals.jpg"
+  },
+  {
+    "category": "mechanical-seals",
+    "categoryName": "Mechanical Seals & Accessories",
+    "name": "Seals Kits",
+    "slug": "seals-kits",
+    "file": "assets/img/products/seals-kits.jpg"
+  },
+  {
+    "category": "mechanical-seals",
+    "categoryName": "Mechanical Seals & Accessories",
+    "name": "O-Rings",
+    "slug": "o-rings",
+    "file": "assets/img/products/o-rings.jpg"
+  },
+  {
+    "category": "mechanical-seals",
+    "categoryName": "Mechanical Seals & Accessories",
+    "name": "Seals Faces",
+    "slug": "seals-faces",
+    "file": "assets/img/products/seals-faces.jpg"
+  },
+  {
+    "category": "bearings-housings",
+    "categoryName": "Bearings & Housings",
+    "name": "Ball Bearings",
+    "slug": "ball-bearings",
+    "file": "assets/img/products/ball-bearings.jpg"
+  },
+  {
+    "category": "bearings-housings",
+    "categoryName": "Bearings & Housings",
+    "name": "Cylindrical Roller Bearings",
+    "slug": "cylindrical-roller-bearings",
+    "file": "assets/img/products/cylindrical-roller-bearings.jpg"
+  },
+  {
+    "category": "bearings-housings",
+    "categoryName": "Bearings & Housings",
+    "name": "Taper Roller Bearings",
+    "slug": "taper-roller-bearings",
+    "file": "assets/img/products/taper-roller-bearings.jpg"
+  },
+  {
+    "category": "bearings-housings",
+    "categoryName": "Bearings & Housings",
+    "name": "Pillow Blocks",
+    "slug": "pillow-blocks",
+    "file": "assets/img/products/pillow-blocks.jpg"
+  },
+  {
+    "category": "bearings-housings",
+    "categoryName": "Bearings & Housings",
+    "name": "Flange Bearing & Housing",
+    "slug": "flange-bearing-and-housing",
+    "file": "assets/img/products/flange-bearing-and-housing.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Bolts",
+    "slug": "bolts",
+    "file": "assets/img/products/bolts.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Washers",
+    "slug": "washers",
+    "file": "assets/img/products/washers.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Nuts",
+    "slug": "nuts",
+    "file": "assets/img/products/nuts.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Studs",
+    "slug": "studs",
+    "file": "assets/img/products/studs.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "U Bolts",
+    "slug": "u-bolts",
+    "file": "assets/img/products/u-bolts.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Eye Bolts",
+    "slug": "eye-bolts",
+    "file": "assets/img/products/eye-bolts.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Circlips",
+    "slug": "circlips",
+    "file": "assets/img/products/circlips.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Shackles",
+    "slug": "shackles",
+    "file": "assets/img/products/shackles.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Keys Bar",
+    "slug": "keys-bar",
+    "file": "assets/img/products/keys-bar.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Industrial Fittings",
+    "slug": "industrial-fittings",
+    "file": "assets/img/products/industrial-fittings.jpg"
+  },
+  {
+    "category": "industrial-components",
+    "categoryName": "Industrial Components",
+    "name": "Shaftings",
+    "slug": "shaftings",
+    "file": "assets/img/products/shaftings.jpg"
+  },
+  {
+    "category": "seals-rubber-nylon",
+    "categoryName": "Seals, Rubber & Nylon Products",
+    "name": "Oil Seals (Type 1)",
+    "slug": "oil-seals-type-1",
+    "file": "assets/img/products/oil-seals-type-1.jpg"
+  },
+  {
+    "category": "seals-rubber-nylon",
+    "categoryName": "Seals, Rubber & Nylon Products",
+    "name": "Oil Seals (Type 2)",
+    "slug": "oil-seals-type-2",
+    "file": "assets/img/products/oil-seals-type-2.jpg"
+  },
+  {
+    "category": "seals-rubber-nylon",
+    "categoryName": "Seals, Rubber & Nylon Products",
+    "name": "O-Rings",
+    "slug": "o-rings-2",
+    "file": "assets/img/products/o-rings-2.jpg"
+  },
+  {
+    "category": "seals-rubber-nylon",
+    "categoryName": "Seals, Rubber & Nylon Products",
+    "name": "V-Rings",
+    "slug": "v-rings",
+    "file": "assets/img/products/v-rings.jpg"
+  },
+  {
+    "category": "seals-rubber-nylon",
+    "categoryName": "Seals, Rubber & Nylon Products",
+    "name": "Anti Vibration Rubber Mounts",
+    "slug": "anti-vibration-rubber-mounts",
+    "file": "assets/img/products/anti-vibration-rubber-mounts.jpg"
+  },
+  {
+    "category": "seals-rubber-nylon",
+    "categoryName": "Seals, Rubber & Nylon Products",
+    "name": "Rubber Impellers",
+    "slug": "rubber-impellers",
+    "file": "assets/img/products/rubber-impellers.jpg"
+  },
+  {
+    "category": "seals-rubber-nylon",
+    "categoryName": "Seals, Rubber & Nylon Products",
+    "name": "Nylon Bushes & Sheets",
+    "slug": "nylon-bushes-and-sheets",
+    "file": "assets/img/products/nylon-bushes-and-sheets.jpg"
+  }
+]
