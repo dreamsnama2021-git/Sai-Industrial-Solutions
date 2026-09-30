@@ -18,6 +18,23 @@
   var yearEl = $('#year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Background slider (hero + page banners) ---------- */
+  $$('.bg-slider').forEach(function (slider) {
+    var slides = $$('.bg-slider__slide', slider);
+    if (slides.length < 2 || reduceMotion) return;
+    var section = slider.closest('section');
+    var contentSlides = section ? $$('.hero__slide-content', section) : [];
+    var i = slides.findIndex(function (s) { return s.classList.contains('is-active'); });
+    if (i < 0) i = 0;
+    setInterval(function () {
+      slides[i].classList.remove('is-active');
+      if (contentSlides[i]) contentSlides[i].classList.remove('is-active');
+      i = (i + 1) % slides.length;
+      slides[i].classList.add('is-active');
+      if (contentSlides[i]) contentSlides[i].classList.add('is-active');
+    }, 5000);
+  });
+
   /* ---------- Sticky header ---------- */
   var header = $('#siteHeader');
   function onScroll() { header.classList.toggle('is-sticky', window.scrollY > 120); }
