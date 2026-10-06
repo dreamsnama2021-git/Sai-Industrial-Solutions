@@ -4,6 +4,7 @@
    ===================================================== */
 
 :root {
+  --header-h: 84px;
   --navy-950: #001134;
   --navy-900: #001a49;
   --navy: #012a6b;
@@ -91,13 +92,13 @@ button { font: inherit; color: inherit; }
 .icon-btn:hover { background: rgba(255, 255, 255, .12); color: var(--gold); }
 
 /* ---------- Header ---------- */
-.site-header { position: absolute; inset: 0 0 auto; z-index: 100; color: #fff; }
+.site-header { position: relative; z-index: 100; height: var(--header-h); color: #fff; }
 .social { display: flex; gap: 8px; }
 .social a { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; transition: background .25s, color .25s; }
 .social .icon { width: 14px; height: 14px; }
 .social a:hover { background: var(--gold); color: var(--navy-950); }
 
-.navbar { position: relative; color: var(--ink); background: rgba(255, 255, 255, .88); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.navbar { position: relative; color: var(--ink); background: #fff; }
 .navbar .brand__logo-wrap { background: transparent; border-radius: 0; padding: 6px 0; }
 .navbar .icon-btn:hover { background: rgba(1, 42, 107, .08); color: var(--gold-dk); }
 .navbar__inner { display: flex; align-items: center; gap: 20px; min-height: 84px; }
@@ -129,7 +130,7 @@ button { font: inherit; color: inherit; }
 .nav-toggle { display: none; }
 .nav .nav__cta { display: none; }
 
-.site-header.is-sticky { position: fixed; animation: slideDown .4s ease; }
+.site-header.is-sticky .navbar { position: fixed; inset: 0 0 auto; animation: slideDown .4s ease; }
 .site-header.is-sticky .navbar { background: rgba(255, 255, 255, .97); box-shadow: 0 6px 24px rgba(0, 17, 52, .18); }
 .site-header.is-sticky .navbar__inner { min-height: 72px; }
 .site-header.is-sticky .navbar .brand__logo-wrap { padding: 4px 0; }
@@ -162,7 +163,7 @@ button { font: inherit; color: inherit; }
 /* ---------- 1. Hero ---------- */
 .hero {
   position: relative; overflow: hidden; display: grid; place-items: center; text-align: center; color: #fff;
-  min-height: max(600px, 82vh); padding: 160px 0 150px;
+  min-height: max(600px, 82vh); padding: calc(160px - var(--header-h)) 0 150px;
   background-color: var(--navy-950);
 }
 .hero::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(rgba(0, 10, 34, .72), rgba(0, 17, 52, .82)); pointer-events: none; }
@@ -536,6 +537,7 @@ button { font: inherit; color: inherit; }
 }
 
 @media (max-width: 991px) {
+  :root { --header-h: 76px; }
   .nav-toggle { display: inline-grid; }
   .nav { position: absolute; top: 100%; left: 0; right: 0; display: none; max-height: calc(100vh - 90px); overflow-y: auto; background: var(--navy-950); border-top: 2px solid var(--gold); color: #fff; }
   .nav a:hover, .nav a.is-active, .has-sub:hover > a { color: var(--gold); }
@@ -550,7 +552,7 @@ button { font: inherit; color: inherit; }
   .navbar__cta { display: none; }
   .nav .nav__cta { display: block; padding: 18px 22px 22px; }
 
-  .hero { padding: 170px 0 0; min-height: 0; }
+  .hero { padding: calc(170px - var(--header-h)) 0 0; min-height: 0; }
   .hero__content { padding-bottom: 60px; }
   .hero__strip { position: relative; left: 0; grid-template-columns: 1fr; min-height: 0; }
   .hero__strip > div { padding: 22px 28px; }
@@ -612,7 +614,7 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Page banner ---------- */
 .pbanner {
-  position: relative; overflow: hidden; color: #fff; text-align: center; padding: 200px 0 92px;
+  position: relative; overflow: hidden; color: #fff; text-align: center; padding: calc(200px - var(--header-h)) 0 92px;
   background-color: var(--navy-950);
 }
 .pbanner::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(rgba(0, 10, 34, .8), rgba(0, 17, 52, .9)); pointer-events: none; }
