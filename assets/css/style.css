@@ -121,7 +121,7 @@ button { font: inherit; color: inherit; }
   box-shadow: 0 18px 40px rgba(0, 0, 0, .3);
 }
 .has-sub:hover > .sub, .has-sub:focus-within > .sub { opacity: 1; visibility: visible; transform: none; }
-.sub a { padding: 12px 20px; text-transform: none; letter-spacing: 0; font-size: 13px; border-bottom: 1px solid rgba(255, 255, 255, .07); }
+.sub a { padding: 9px 20px; text-transform: none; letter-spacing: 0; font-size: 13px; border-bottom: 1px solid rgba(255, 255, 255, .07); }
 .sub li:last-child a { border-bottom: 0; }
 .sub a:hover { background: rgba(255, 255, 255, .05); padding-left: 26px; }
 .nav-toggle { display: none; }
@@ -540,7 +540,7 @@ button { font: inherit; color: inherit; }
   .sub { position: static; display: none; opacity: 1; visibility: visible; transform: none; box-shadow: none; border-top: 0; background: rgba(255, 255, 255, .04); }
   .has-sub.is-open > .sub { display: block; }
   .has-sub.is-open > a .icon { transform: rotate(180deg); }
-  .sub a { padding-left: 38px; }
+  .sub a { padding: 9px 22px 9px 38px; line-height: 1.35; }
   .navbar__inner { min-height: 76px; }
 
   .hero { padding: 170px 0 0; min-height: 0; }
