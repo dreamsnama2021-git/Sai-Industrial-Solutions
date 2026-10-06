@@ -215,11 +215,7 @@ button { font: inherit; color: inherit; }
 .vm { padding-top: 50px; padding-bottom: 30px; }
 .why--tight { padding-top: 50px; }
 
-/* ---------- 3. Clients ---------- */
-.clients { padding: 10px 0 70px; }
-.clients__inner { display: flex; align-items: center; gap: 50px; }
-.clients__label { font: 500 24px/1.15 var(--font-head); color: var(--ink); flex: none; }
-.clients__logos { flex: 1; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+/* ---------- 3. Clients (uses the .brands marquee below) ---------- */
 .logo-ph { display: inline-flex; align-items: center; gap: 8px; color: #a1a8b8; font-weight: 500; white-space: nowrap; }
 .logo-ph i { width: 26px; height: 26px; border-radius: 6px; background: currentColor; opacity: .55; }
 .logo-ph--a { font: 500 34px/1 var(--font-head); }
@@ -557,8 +553,6 @@ button { font: inherit; color: inherit; }
   .about__grid, .why__grid, .faq__grid { grid-template-columns: 1fr; gap: 60px; }
   .vm__grid { grid-template-columns: 1fr; gap: 24px; }
   .why__media { max-width: 520px; }
-  .clients__inner { flex-direction: column; align-items: flex-start; gap: 24px; }
-  .clients__logos { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: 22px 36px; }
   .services__banner::before { right: 0; }
   .services__banner-inner { flex-direction: column; align-items: flex-start; }
   .services__grid { grid-template-columns: 1fr; gap: 18px; padding-bottom: 70px; }
@@ -720,6 +714,7 @@ button { font: inherit; color: inherit; }
   flex: none; width: 200px; height: 100px; margin-right: 22px; padding: 18px 24px;
   display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--line);
 }
+.brands--clients { background: var(--bg); }
 .brands__track img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
 @keyframes brands-scroll { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
