@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products | Sai Industrial Solutions</title>
-  <meta name="description" content="Browse Sai Industrial Solutions' full product range — power transmission products, couplings &amp; gear components, mechanical seals, bearings &amp; housings, industrial components, and seals, rubber &amp; nylon products. Send an enquiry for any product.">
+  <meta name="description" content="Browse Sai Industrial Solutions' full product range — pulleys, belts &amp; bushes, couplings, motors &amp; gear boxes, sprockets &amp; chains, gears &amp; shafts, seals &amp; customised rubber products, fasteners, and ferrous &amp; non-ferrous metals. Send an enquiry for any product.">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,11 +56,9 @@
             <a href="products.html" class="is-active" aria-haspopup="true">Products <svg class="icon icon--sm"><use href="#i-chevron"/></svg></a>
             <ul class="sub">
               <li><a href="#power-transmission">Power Transmission Products</a></li>
-              <li><a href="#couplings-gear">Couplings &amp; Gear Components</a></li>
-              <li><a href="#mechanical-seals">Mechanical Seals &amp; Accessories</a></li>
-              <li><a href="#bearings-housings">Bearings &amp; Housings</a></li>
-              <li><a href="#industrial-components">Industrial Components</a></li>
-              <li><a href="#seals-rubber-nylon">Seals, Rubber &amp; Nylon Products</a></li>
+              <li><a href="#seals-rubber">Seals &amp; Customised Rubber Products</a></li>
+              <li><a href="#fasteners">Fasteners</a></li>
+              <li><a href="#metals">Ferrous &amp; Non-Ferrous Metals</a></li>
             </ul>
           </li>
           <li class="has-sub">
@@ -115,217 +113,306 @@
   </div>
 </section>
 
-<!-- ============ CATEGORY QUICK-NAV + SEARCH ============ -->
+<!-- ============ CATEGORY QUICK-NAV + VIEW SWITCH ============ -->
 <section class="cat-nav">
   <div class="container cat-nav__inner">
-    <nav class="cat-pills" aria-label="Product categories">
+    <div class="view-switch" role="group" aria-label="Category layout">
+      <span class="view-switch__label">Show as</span>
+      <button class="view-switch__btn is-active" type="button" data-view-btn="4" aria-pressed="true">4 Categories</button>
+      <button class="view-switch__btn" type="button" data-view-btn="8" aria-pressed="false">8 Categories</button>
+    </div>
+    <nav class="cat-pills" data-view="4" aria-label="Product categories">
       <a href="#power-transmission" class="cat-pill-link" data-pill-drop="power-transmission">Power Transmission</a>
-      <a href="#couplings-gear" class="cat-pill-link" data-pill-drop="couplings-gear">Couplings &amp; Gear</a>
-      <a href="#mechanical-seals" class="cat-pill-link" data-pill-drop="mechanical-seals">Mechanical Seals</a>
-      <a href="#bearings-housings" class="cat-pill-link" data-pill-drop="bearings-housings">Bearings &amp; Housings</a>
-      <a href="#industrial-components" class="cat-pill-link" data-pill-drop="industrial-components">Industrial Components</a>
-      <a href="#seals-rubber-nylon" class="cat-pill-link" data-pill-drop="seals-rubber-nylon">Seals, Rubber &amp; Nylon</a>
+      <a href="#seals-rubber" class="cat-pill-link">Seals &amp; Rubber</a>
+      <a href="#fasteners" class="cat-pill-link">Fasteners</a>
+      <a href="#metals" class="cat-pill-link">Ferrous &amp; Non-Ferrous</a>
+    </nav>
+    <nav class="cat-pills" data-view="8" aria-label="Product categories" hidden>
+      <a href="#s-pulleys-belts" class="cat-pill-link">Pulleys, Bushes &amp; Belts</a>
+      <a href="#s-couplings" class="cat-pill-link">Couplings</a>
+      <a href="#s-motors-gearbox" class="cat-pill-link">Motors &amp; Gear Box</a>
+      <a href="#s-sprockets-chains" class="cat-pill-link">Sprockets &amp; Chains</a>
+      <a href="#s-gears-shafts" class="cat-pill-link">Gears &amp; Shafts</a>
+      <a href="#s-seals-rubber" class="cat-pill-link">Seals &amp; Rubber</a>
+      <a href="#s-fasteners" class="cat-pill-link">Fasteners</a>
+      <a href="#s-metals" class="cat-pill-link">Ferrous &amp; Non-Ferrous</a>
     </nav>
   </div>
-  <ul class="cat-pill__drop" data-pill-drop-menu="power-transmission">
-    <li><a href="#power-transmission" data-subcat-jump="power-transmission:pulley">Pulley</a></li>
-    <li><a href="#power-transmission" data-subcat-jump="power-transmission:belt">Belt</a></li>
-    <li><a href="#power-transmission" data-subcat-jump="power-transmission:sprocket">Sprocket</a></li>
-    <li><a href="#power-transmission" data-subcat-jump="power-transmission:chain">Chain</a></li>
-    <li><a href="#power-transmission" data-subcat-jump="power-transmission:bush">Bush</a></li>
-  </ul>
-  <ul class="cat-pill__drop" data-pill-drop-menu="couplings-gear">
-    <li><a href="#couplings-gear" data-subcat-jump="couplings-gear:coupling">Coupling</a></li>
-    <li><a href="#couplings-gear" data-subcat-jump="couplings-gear:motor">Motor</a></li>
-    <li><a href="#couplings-gear" data-subcat-jump="couplings-gear:gearbox">Gearbox</a></li>
-  </ul>
-  <ul class="cat-pill__drop" data-pill-drop-menu="mechanical-seals">
-    <li><a href="#mechanical-seals" data-subcat-jump="mechanical-seals:seal">Seal</a></li>
-    <li><a href="#mechanical-seals" data-subcat-jump="mechanical-seals:oring">O-Ring</a></li>
-  </ul>
-  <ul class="cat-pill__drop" data-pill-drop-menu="bearings-housings">
-    <li><a href="#bearings-housings" data-subcat-jump="bearings-housings:bearing">Bearing</a></li>
-    <li><a href="#bearings-housings" data-subcat-jump="bearings-housings:housing">Housing</a></li>
-  </ul>
-  <ul class="cat-pill__drop" data-pill-drop-menu="industrial-components">
-    <li><a href="#industrial-components" data-subcat-jump="industrial-components:fastener">Fastener</a></li>
-    <li><a href="#industrial-components" data-subcat-jump="industrial-components:hardware">Hardware</a></li>
-    <li><a href="#industrial-components" data-subcat-jump="industrial-components:other">Other</a></li>
-  </ul>
-  <ul class="cat-pill__drop" data-pill-drop-menu="seals-rubber-nylon">
-    <li><a href="#seals-rubber-nylon" data-subcat-jump="seals-rubber-nylon:seal">Seal</a></li>
-    <li><a href="#seals-rubber-nylon" data-subcat-jump="seals-rubber-nylon:rubber">Rubber</a></li>
-    <li><a href="#seals-rubber-nylon" data-subcat-jump="seals-rubber-nylon:nylon">Nylon</a></li>
+  <ul class="cat-pill__drop" data-view="4" data-pill-drop-menu="power-transmission">
+    <li><a href="#power-transmission" data-subcat-jump="power-transmission:pulleys-belts">Pulleys, Bushes &amp; Belts</a></li>
+    <li><a href="#power-transmission" data-subcat-jump="power-transmission:couplings">Couplings</a></li>
+    <li><a href="#power-transmission" data-subcat-jump="power-transmission:motors-gearbox">Motors &amp; Gear Box</a></li>
+    <li><a href="#power-transmission" data-subcat-jump="power-transmission:sprockets-chains">Sprockets &amp; Chains</a></li>
+    <li><a href="#power-transmission" data-subcat-jump="power-transmission:gears-shafts">Gears &amp; Shafts</a></li>
   </ul>
 </section>
 
-<nav class="cat-side" id="catSide" aria-label="Product categories (floating)">
+<nav class="cat-side" data-view="4" aria-label="Product categories (floating)">
   <a href="#power-transmission">Power Transmission</a>
-  <a href="#couplings-gear">Couplings &amp; Gear</a>
-  <a href="#mechanical-seals">Mechanical Seals</a>
-  <a href="#bearings-housings">Bearings &amp; Housings</a>
-  <a href="#industrial-components">Industrial Components</a>
-  <a href="#seals-rubber-nylon">Seals, Rubber &amp; Nylon</a>
+  <a href="#seals-rubber">Seals &amp; Rubber</a>
+  <a href="#fasteners">Fasteners</a>
+  <a href="#metals">Ferrous &amp; Non-Ferrous</a>
+</nav>
+<nav class="cat-side" data-view="8" aria-label="Product categories (floating)" hidden>
+  <a href="#s-pulleys-belts">Pulleys, Bushes &amp; Belts</a>
+  <a href="#s-couplings">Couplings</a>
+  <a href="#s-motors-gearbox">Motors &amp; Gear Box</a>
+  <a href="#s-sprockets-chains">Sprockets &amp; Chains</a>
+  <a href="#s-gears-shafts">Gears &amp; Shafts</a>
+  <a href="#s-seals-rubber">Seals &amp; Rubber</a>
+  <a href="#s-fasteners">Fasteners</a>
+  <a href="#s-metals">Ferrous &amp; Non-Ferrous</a>
 </nav>
 
-<!-- ============ CATEGORY: POWER TRANSMISSION PRODUCTS ============ -->
+<!-- ============ VIEW 1: 4 CATEGORIES (Power Transmission with sub-categories) ============ -->
+<div class="view" data-view="4">
+
 <section class="cat-section" id="power-transmission" data-cat data-cat-name="Power Transmission Products">
   <div class="container">
     <h2 class="cat-bar"><span>Power Transmission Products</span></h2>
 
     <div class="subcat-grid" data-subcat-group="power-transmission">
       <button class="subcat-card is-active" type="button" data-subcat-filter="all"><span>All Products</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="pulley"><span>Pulley</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="belt"><span>Belt</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="sprocket"><span>Sprocket</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="chain"><span>Chain</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="bush"><span>Bush</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+      <button class="subcat-card" type="button" data-subcat-filter="pulleys-belts"><span>Pulleys, Bushes &amp; Belts</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+      <button class="subcat-card" type="button" data-subcat-filter="couplings"><span>Couplings</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+      <button class="subcat-card" type="button" data-subcat-filter="motors-gearbox"><span>Motors &amp; Gear Box</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+      <button class="subcat-card" type="button" data-subcat-filter="sprockets-chains"><span>Sprockets &amp; Chains</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+      <button class="subcat-card" type="button" data-subcat-filter="gears-shafts"><span>Gears &amp; Shafts</span><svg class="icon"><use href="#i-arrow"/></svg></button>
     </div>
 
     <div class="cat-grid" data-subcat-target="power-transmission">
-      <article class="prow-card" data-name="taper lock pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/taper-lock-pulley.jpg" alt="Taper Lock Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Taper Lock Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Taper Lock Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="pilot bore pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/pilot-bore-pulley.jpg" alt="Pilot Bore Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pilot Bore Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pilot Bore Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="timing belt pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/timing-belt-pulley.jpg" alt="Timing Belt Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Timing Belt Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Timing Belt Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="variable pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/variable-pulley.jpg" alt="Variable Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Variable Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Variable Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="flat belt pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/flat-belt-pulley.jpg" alt="Flat Belt Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flat Belt Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flat Belt Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="chain pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/chain-pulley.jpg" alt="Chain Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Chain Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Chain Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="multi groove pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/multi-groove-pulley.jpg" alt="Multi Groove Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Multi Groove Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Multi Groove Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="step pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/step-pulley.jpg" alt="Step Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Step Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Step Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="wire rope pulley" data-subcat="pulley"><div class="prow-card__media"><img src="assets/img/products/wire-rope-pulley.jpg" alt="Wire Rope Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Wire Rope Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Wire Rope Pulley">Enquire</button></div></article>
-      <article class="prow-card" data-name="v belt" data-subcat="belt"><div class="prow-card__media"><img src="assets/img/products/v-belt.jpg" alt="V Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">V Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="V Belt">Enquire</button></div></article>
-      <article class="prow-card" data-name="timing belt" data-subcat="belt"><div class="prow-card__media"><img src="assets/img/products/timing-belt.jpg" alt="Timing Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Timing Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Timing Belt">Enquire</button></div></article>
-      <article class="prow-card" data-name="simple sprocket" data-subcat="sprocket"><div class="prow-card__media"><img src="assets/img/products/simple-sprocket.jpg" alt="Simple Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Simple Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Simple Sprocket">Enquire</button></div></article>
-      <article class="prow-card" data-name="duplex sprocket" data-subcat="sprocket"><div class="prow-card__media"><img src="assets/img/products/duplex-sprocket.jpg" alt="Duplex Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Duplex Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Duplex Sprocket">Enquire</button></div></article>
-      <article class="prow-card" data-name="triplex sprocket" data-subcat="sprocket"><div class="prow-card__media"><img src="assets/img/products/triplex-sprocket.jpg" alt="Triplex Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Triplex Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Triplex Sprocket">Enquire</button></div></article>
-      <article class="prow-card" data-name="double single sprocket" data-subcat="sprocket"><div class="prow-card__media"><img src="assets/img/products/double-single-sprocket.jpg" alt="Double Single Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Double Single Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Double Single Sprocket">Enquire</button></div></article>
-      <article class="prow-card" data-name="roller chain" data-subcat="chain"><div class="prow-card__media"><img src="assets/img/products/roller-chain.jpg" alt="Roller Chain" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Roller Chain</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Roller Chain">Enquire</button></div></article>
-      <article class="prow-card" data-name="attachment chains" data-subcat="chain"><div class="prow-card__media"><img src="assets/img/products/attachment-chains.jpg" alt="Attachment Chains" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Attachment Chains</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Attachment Chains">Enquire</button></div></article>
-      <article class="prow-card" data-name="qd bushing" data-subcat="bush"><div class="prow-card__media"><img src="assets/img/products/qd-bushing.jpg" alt="QD Bushing" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">QD Bushing</h3><button class="prow-card__enquire" type="button" data-enquire data-product="QD Bushing">Enquire</button></div></article>
-      <article class="prow-card" data-name="taper lock bush" data-subcat="bush"><div class="prow-card__media"><img src="assets/img/products/taper-lock-bush.jpg" alt="Taper Lock Bush" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Taper Lock Bush</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Taper Lock Bush">Enquire</button></div></article>
+      <article class="prow-card" data-name="taper lock pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/taper-lock-pulley.jpg" alt="Taper Lock Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Taper Lock Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Taper Lock Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="pilot bore pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/pilot-bore-pulley.jpg" alt="Pilot Bore Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pilot Bore Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pilot Bore Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="timing belt pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/timing-belt-pulley.jpg" alt="Timing Belt Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Timing Belt Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Timing Belt Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="variable pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/variable-pulley.jpg" alt="Variable Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Variable Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Variable Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="flat belt pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/flat-belt-pulley.jpg" alt="Flat Belt Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flat Belt Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flat Belt Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="chain pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/chain-pulley.jpg" alt="Chain Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Chain Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Chain Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="multi groove pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/multi-groove-pulley.jpg" alt="Multi Groove Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Multi Groove Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Multi Groove Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="step pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/step-pulley.jpg" alt="Step Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Step Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Step Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="wire rope pulley" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/wire-rope-pulley.jpg" alt="Wire Rope Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Wire Rope Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Wire Rope Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="v belt" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/v-belt.jpg" alt="V Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">V Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="V Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="timing belt" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/timing-belt.jpg" alt="Timing Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Timing Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Timing Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="multigroove belt" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/multigroove-belt.jpg" alt="Multigroove Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Multigroove Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Multigroove Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="conveyor belt" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/conveyor-belt.jpg" alt="Conveyor Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Conveyor Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Conveyor Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="taper lock bush" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/taper-lock-bush.jpg" alt="Taper Lock Bush" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Taper Lock Bush</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Taper Lock Bush">Enquire</button></div></article>
+      <article class="prow-card" data-name="qd bushing" data-subcat="pulleys-belts" data-cat-name="Pulleys, Bushes &amp; Belts"><div class="prow-card__media"><img src="assets/img/products/qd-bushing.jpg" alt="QD Bushing" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">QD Bushing</h3><button class="prow-card__enquire" type="button" data-enquire data-product="QD Bushing">Enquire</button></div></article>
+      <article class="prow-card" data-name="disc coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/disc-coupling.jpg" alt="Disc Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Disc Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Disc Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="flexible coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/flexible-coupling.jpg" alt="Flexible Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flexible Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flexible Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="gear coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/gear-coupling.jpg" alt="Gear Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Gear Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Gear Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="pin &amp; bush coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/pin-bush-coupling.jpg" alt="Pin &amp; Bush Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pin &amp; Bush Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pin &amp; Bush Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="h type coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/h-type-coupling.jpg" alt="H Type Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">H Type Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="H Type Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="hrc coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/hrc-coupling.jpg" alt="HRC Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">HRC Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="HRC Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="nm coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/nm-coupling.jpg" alt="NM Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">NM Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="NM Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="jaw coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/jaw-coupling.jpg" alt="Jaw Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Jaw Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Jaw Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="sureflex coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/sureflex-coupling.jpg" alt="Sureflex Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Sureflex Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Sureflex Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="tyre coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/tyre-coupling.jpg" alt="Tyre Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Tyre Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Tyre Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="grid coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/grid-coupling.jpg" alt="Grid Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Grid Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Grid Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="rotex coupling" data-subcat="couplings" data-cat-name="Couplings"><div class="prow-card__media"><img src="assets/img/products/rotex-coupling.jpg" alt="Rotex Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Rotex Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Rotex Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="foot mounted motor" data-subcat="motors-gearbox" data-cat-name="Motors &amp; Gear Box"><div class="prow-card__media"><img src="assets/img/products/foot-mounted-motor.jpg" alt="Foot Mounted Motor" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Foot Mounted Motor</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Foot Mounted Motor">Enquire</button></div></article>
+      <article class="prow-card" data-name="flange mounted motor" data-subcat="motors-gearbox" data-cat-name="Motors &amp; Gear Box"><div class="prow-card__media"><img src="assets/img/products/flange-mounted-motor.jpg" alt="Flange Mounted Motor" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flange Mounted Motor</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flange Mounted Motor">Enquire</button></div></article>
+      <article class="prow-card" data-name="shaft mounted gearbox" data-subcat="motors-gearbox" data-cat-name="Motors &amp; Gear Box"><div class="prow-card__media"><img src="assets/img/products/shaft-mounted-gearbox.jpg" alt="Shaft Mounted Gearbox" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Shaft Mounted Gearbox</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Shaft Mounted Gearbox">Enquire</button></div></article>
+      <article class="prow-card" data-name="flange mounted gearbox" data-subcat="motors-gearbox" data-cat-name="Motors &amp; Gear Box"><div class="prow-card__media"><img src="assets/img/products/flange-mounted-gearbox.jpg" alt="Flange Mounted Gearbox" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flange Mounted Gearbox</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flange Mounted Gearbox">Enquire</button></div></article>
+      <article class="prow-card" data-name="simple sprocket" data-subcat="sprockets-chains" data-cat-name="Sprockets &amp; Chains"><div class="prow-card__media"><img src="assets/img/products/simple-sprocket.jpg" alt="Simple Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Simple Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Simple Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="duplex sprocket" data-subcat="sprockets-chains" data-cat-name="Sprockets &amp; Chains"><div class="prow-card__media"><img src="assets/img/products/duplex-sprocket.jpg" alt="Duplex Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Duplex Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Duplex Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="triplex sprocket" data-subcat="sprockets-chains" data-cat-name="Sprockets &amp; Chains"><div class="prow-card__media"><img src="assets/img/products/triplex-sprocket.jpg" alt="Triplex Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Triplex Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Triplex Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="double single sprocket" data-subcat="sprockets-chains" data-cat-name="Sprockets &amp; Chains"><div class="prow-card__media"><img src="assets/img/products/double-single-sprocket.jpg" alt="Double Single Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Double Single Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Double Single Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="attachment chains" data-subcat="sprockets-chains" data-cat-name="Sprockets &amp; Chains"><div class="prow-card__media"><img src="assets/img/products/attachment-chains.jpg" alt="Attachment Chains" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Attachment Chains</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Attachment Chains">Enquire</button></div></article>
+      <article class="prow-card" data-name="roller chain" data-subcat="sprockets-chains" data-cat-name="Sprockets &amp; Chains"><div class="prow-card__media"><img src="assets/img/products/roller-chain.jpg" alt="Roller Chain" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Roller Chain</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Roller Chain">Enquire</button></div></article>
+      <article class="prow-card" data-name="helical gears" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/helical-gears.jpg" alt="Helical Gears" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Helical Gears</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Helical Gears">Enquire</button></div></article>
+      <article class="prow-card" data-name="spline shaft" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/spline-shaft.jpg" alt="Spline Shaft" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Spline Shaft</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Spline Shaft">Enquire</button></div></article>
+      <article class="prow-card" data-name="herringbone" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/herringbone.jpg" alt="Herringbone" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Herringbone</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Herringbone">Enquire</button></div></article>
+      <article class="prow-card" data-name="machine shafts" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/machine-shafts.jpg" alt="Machine Shafts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Machine Shafts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Machine Shafts">Enquire</button></div></article>
+      <article class="prow-card" data-name="pinion and rack gear" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/pinion-and-rack-gear.jpg" alt="Pinion and Rack Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pinion and Rack Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pinion and Rack Gear">Enquire</button></div></article>
+      <article class="prow-card" data-name="worm gear" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/worm-gear.jpg" alt="Worm Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Worm Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Worm Gear">Enquire</button></div></article>
+      <article class="prow-card" data-name="spur gear" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/spur-gear.jpg" alt="Spur Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Spur Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Spur Gear">Enquire</button></div></article>
+      <article class="prow-card" data-name="spiral bevel gear" data-subcat="gears-shafts" data-cat-name="Gears &amp; Shafts"><div class="prow-card__media"><img src="assets/img/products/spiral-bevel-gear.jpg" alt="Spiral Bevel Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Spiral Bevel Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Spiral Bevel Gear">Enquire</button></div></article>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: COUPLINGS AND GEAR COMPONENTS ============ -->
-<section class="cat-section" id="couplings-gear" data-cat data-cat-name="Couplings & Gear Components">
+<section class="cat-section" id="seals-rubber" data-cat data-cat-name="Seals &amp; Customised Rubber Products">
   <div class="container">
-    <h2 class="cat-bar"><span>Couplings and Gear Components</span></h2>
-
-    <div class="subcat-grid" data-subcat-group="couplings-gear">
-      <button class="subcat-card is-active" type="button" data-subcat-filter="all"><span>All Products</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="coupling"><span>Coupling</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="motor"><span>Motor</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="gearbox"><span>Gearbox</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-    </div>
-
-    <div class="cat-grid" data-subcat-target="couplings-gear">
-      <article class="prow-card" data-name="flexible coupling type 1" data-subcat="coupling"><div class="prow-card__media"><img src="assets/img/products/flexible-coupling-type-1.jpg" alt="Flexible Coupling (Type 1)" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flexible Coupling (Type 1)</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flexible Coupling (Type 1)">Enquire</button></div></article>
-      <article class="prow-card" data-name="flexible coupling type 2" data-subcat="coupling"><div class="prow-card__media"><img src="assets/img/products/flexible-coupling-type-2.jpg" alt="Flexible Coupling (Type 2)" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flexible Coupling (Type 2)</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flexible Coupling (Type 2)">Enquire</button></div></article>
-      <article class="prow-card" data-name="flexible coupling type 3" data-subcat="coupling"><div class="prow-card__media"><img src="assets/img/products/flexible-coupling-type-3.jpg" alt="Flexible Coupling (Type 3)" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flexible Coupling (Type 3)</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flexible Coupling (Type 3)">Enquire</button></div></article>
-      <article class="prow-card" data-name="flexible coupling type 4" data-subcat="coupling"><div class="prow-card__media"><img src="assets/img/products/flexible-coupling-type-4.jpg" alt="Flexible Coupling (Type 4)" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flexible Coupling (Type 4)</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flexible Coupling (Type 4)">Enquire</button></div></article>
-      <article class="prow-card" data-name="grid coupling" data-subcat="coupling"><div class="prow-card__media"><img src="assets/img/products/grid-coupling.jpg" alt="Grid Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Grid Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Grid Coupling">Enquire</button></div></article>
-      <article class="prow-card" data-name="tyre coupling" data-subcat="coupling"><div class="prow-card__media"><img src="assets/img/products/tyre-coupling.jpg" alt="Tyre Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Tyre Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Tyre Coupling">Enquire</button></div></article>
-      <article class="prow-card" data-name="foot mounted motor" data-subcat="motor"><div class="prow-card__media"><img src="assets/img/products/foot-mounted-motor.jpg" alt="Foot Mounted Motor" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Foot Mounted Motor</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Foot Mounted Motor">Enquire</button></div></article>
-      <article class="prow-card" data-name="flange mounted motor" data-subcat="motor"><div class="prow-card__media"><img src="assets/img/products/flange-mounted-motor.jpg" alt="Flange Mounted Motor" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flange Mounted Motor</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flange Mounted Motor">Enquire</button></div></article>
-      <article class="prow-card" data-name="right angle gearbox" data-subcat="gearbox"><div class="prow-card__media"><img src="assets/img/products/right-angle-gearbox.jpg" alt="Right Angle Gearbox" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Right Angle Gearbox</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Right Angle Gearbox">Enquire</button></div></article>
-      <article class="prow-card" data-name="flange mounted gearbox" data-subcat="gearbox"><div class="prow-card__media"><img src="assets/img/products/flange-mounted-gearbox.jpg" alt="Flange Mounted Gearbox" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flange Mounted Gearbox</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flange Mounted Gearbox">Enquire</button></div></article>
-      <article class="prow-card" data-name="shaft mounted gearbox" data-subcat="gearbox"><div class="prow-card__media"><img src="assets/img/products/shaft-mounted-gearbox.jpg" alt="Shaft Mounted Gearbox" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Shaft Mounted Gearbox</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Shaft Mounted Gearbox">Enquire</button></div></article>
+    <h2 class="cat-bar"><span>Seals &amp; Customised Rubber Products</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="v rings"><div class="prow-card__media"><img src="assets/img/products/v-rings.jpg" alt="V Rings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">V Rings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="V Rings">Enquire</button></div></article>
+      <article class="prow-card" data-name="seal kits"><div class="prow-card__media"><img src="assets/img/products/seal-kits.jpg" alt="Seal Kits" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Seal Kits</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Seal Kits">Enquire</button></div></article>
+      <article class="prow-card" data-name="mechanical seals"><div class="prow-card__media"><img src="assets/img/products/mechanical-seals.jpg" alt="Mechanical Seals" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Mechanical Seals</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Mechanical Seals">Enquire</button></div></article>
+      <article class="prow-card" data-name="anti vibration rubber mounts"><div class="prow-card__media"><img src="assets/img/products/anti-vibration-rubber-mounts.jpg" alt="Anti Vibration Rubber Mounts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Anti Vibration Rubber Mounts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Anti Vibration Rubber Mounts">Enquire</button></div></article>
+      <article class="prow-card" data-name="rubber impellers"><div class="prow-card__media"><img src="assets/img/products/rubber-impellers.jpg" alt="Rubber Impellers" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Rubber Impellers</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Rubber Impellers">Enquire</button></div></article>
+      <article class="prow-card" data-name="nbr seals"><div class="prow-card__media"><img src="assets/img/products/nbr-seals.jpg" alt="NBR Seals" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">NBR Seals</h3><button class="prow-card__enquire" type="button" data-enquire data-product="NBR Seals">Enquire</button></div></article>
+      <article class="prow-card" data-name="viton oil seals"><div class="prow-card__media"><img src="assets/img/products/viton-oil-seals.jpg" alt="Viton Oil Seals" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Viton Oil Seals</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Viton Oil Seals">Enquire</button></div></article>
+      <article class="prow-card" data-name="o rings"><div class="prow-card__media"><img src="assets/img/products/o-rings.jpg" alt="O Rings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">O Rings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="O Rings">Enquire</button></div></article>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: MECHANICAL SEALS & ACCESSORIES ============ -->
-<section class="cat-section" id="mechanical-seals" data-cat data-cat-name="Mechanical Seals & Accessories">
+<section class="cat-section" id="fasteners" data-cat data-cat-name="Fasteners">
   <div class="container">
-    <h2 class="cat-bar"><span>Mechanical Seals &amp; Accessories</span></h2>
-
-    <div class="subcat-grid" data-subcat-group="mechanical-seals">
-      <button class="subcat-card is-active" type="button" data-subcat-filter="all"><span>All Products</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="seal"><span>Seal</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="oring"><span>O-Ring</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-    </div>
-
-    <div class="cat-grid" data-subcat-target="mechanical-seals">
-      <article class="prow-card" data-name="mechanical seals" data-subcat="seal"><div class="prow-card__media"><img src="assets/img/products/mechanical-seals.jpg" alt="Mechanical Seals" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Mechanical Seals</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Mechanical Seals">Enquire</button></div></article>
-      <article class="prow-card" data-name="seals kits" data-subcat="seal"><div class="prow-card__media"><img src="assets/img/products/seals-kits.jpg" alt="Seals Kits" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Seals Kits</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Seals Kits">Enquire</button></div></article>
-      <article class="prow-card" data-name="o-rings" data-subcat="oring"><div class="prow-card__media"><img src="assets/img/products/o-rings.jpg" alt="O-Rings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">O-Rings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="O-Rings">Enquire</button></div></article>
-      <article class="prow-card" data-name="seals faces" data-subcat="seal"><div class="prow-card__media"><img src="assets/img/products/seals-faces.jpg" alt="Seals Faces" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Seals Faces</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Seals Faces">Enquire</button></div></article>
+    <h2 class="cat-bar"><span>Fasteners</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="bolts"><div class="prow-card__media"><img src="assets/img/products/bolts.jpg" alt="Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Bolts">Enquire</button></div></article>
+      <article class="prow-card" data-name="washers"><div class="prow-card__media"><img src="assets/img/products/washers.jpg" alt="Washers" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Washers</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Washers">Enquire</button></div></article>
+      <article class="prow-card" data-name="nuts"><div class="prow-card__media"><img src="assets/img/products/nuts.jpg" alt="Nuts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Nuts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Nuts">Enquire</button></div></article>
+      <article class="prow-card" data-name="studs"><div class="prow-card__media"><img src="assets/img/products/studs.jpg" alt="Studs" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Studs</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Studs">Enquire</button></div></article>
+      <article class="prow-card" data-name="u bolts"><div class="prow-card__media"><img src="assets/img/products/u-bolts.jpg" alt="U Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">U Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="U Bolts">Enquire</button></div></article>
+      <article class="prow-card" data-name="eye bolts"><div class="prow-card__media"><img src="assets/img/products/eye-bolts.jpg" alt="Eye Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Eye Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Eye Bolts">Enquire</button></div></article>
+      <article class="prow-card" data-name="circlips"><div class="prow-card__media"><img src="assets/img/products/circlips.jpg" alt="Circlips" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Circlips</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Circlips">Enquire</button></div></article>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: BEARINGS & HOUSINGS ============ -->
-<section class="cat-section" id="bearings-housings" data-cat data-cat-name="Bearings & Housings">
+<section class="cat-section" id="metals" data-cat data-cat-name="Ferrous &amp; Non-Ferrous Metals">
   <div class="container">
-    <h2 class="cat-bar"><span>Bearings &amp; Housings</span></h2>
-
-    <div class="subcat-grid" data-subcat-group="bearings-housings">
-      <button class="subcat-card is-active" type="button" data-subcat-filter="all"><span>All Products</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="bearing"><span>Bearing</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="housing"><span>Housing</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-    </div>
-
-    <div class="cat-grid" data-subcat-target="bearings-housings">
-      <article class="prow-card" data-name="ball bearings" data-subcat="bearing"><div class="prow-card__media"><img src="assets/img/products/ball-bearings.jpg" alt="Ball Bearings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Ball Bearings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Ball Bearings">Enquire</button></div></article>
-      <article class="prow-card" data-name="cylindrical roller bearings" data-subcat="bearing"><div class="prow-card__media"><img src="assets/img/products/cylindrical-roller-bearings.jpg" alt="Cylindrical Roller Bearings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Cylindrical Roller Bearings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Cylindrical Roller Bearings">Enquire</button></div></article>
-      <article class="prow-card" data-name="taper roller bearings" data-subcat="bearing"><div class="prow-card__media"><img src="assets/img/products/taper-roller-bearings.jpg" alt="Taper Roller Bearings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Taper Roller Bearings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Taper Roller Bearings">Enquire</button></div></article>
-      <article class="prow-card" data-name="pillow blocks" data-subcat="housing"><div class="prow-card__media"><img src="assets/img/products/pillow-blocks.jpg" alt="Pillow Blocks" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pillow Blocks</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pillow Blocks">Enquire</button></div></article>
-      <article class="prow-card" data-name="flange bearing and housing" data-subcat="housing"><div class="prow-card__media"><img src="assets/img/products/flange-bearing-and-housing.jpg" alt="Flange Bearing & Housing" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flange Bearing & Housing</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flange Bearing & Housing">Enquire</button></div></article>
+    <h2 class="cat-bar"><span>Ferrous &amp; Non-Ferrous Metals</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="angle bars"><div class="prow-card__media"><img src="assets/img/products/angle-bars.jpg" alt="Angle Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Angle Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Angle Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="flat bars"><div class="prow-card__media"><img src="assets/img/products/flat-bars.jpg" alt="Flat Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flat Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flat Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="hexagon bars"><div class="prow-card__media"><img src="assets/img/products/hexagon-bars.jpg" alt="Hexagon Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Hexagon Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Hexagon Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="round bars"><div class="prow-card__media"><img src="assets/img/products/round-bars.jpg" alt="Round Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Round Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Round Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="square bars"><div class="prow-card__media"><img src="assets/img/products/square-bars.jpg" alt="Square Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Square Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Square Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="sheets"><div class="prow-card__media"><img src="assets/img/products/sheets.jpg" alt="Sheets" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Sheets</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Sheets">Enquire</button></div></article>
+      <article class="prow-card" data-name="nylon bushes &amp; sheets"><div class="prow-card__media"><img src="assets/img/products/nylon-bushes-and-sheets.jpg" alt="Nylon Bushes &amp; Sheets" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Nylon Bushes &amp; Sheets</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Nylon Bushes &amp; Sheets">Enquire</button></div></article>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: INDUSTRIAL COMPONENTS ============ -->
-<section class="cat-section" id="industrial-components" data-cat data-cat-name="Industrial Components">
+</div>
+
+<!-- ============ VIEW 2: 8 CATEGORIES (one section per catalogue heading) ============ -->
+<div class="view" data-view="8" hidden>
+
+<section class="cat-section" id="s-pulleys-belts" data-cat data-cat-name="Pulleys, Bushes &amp; Belts">
   <div class="container">
-    <h2 class="cat-bar"><span>Industrial Components</span></h2>
-
-    <div class="subcat-grid" data-subcat-group="industrial-components">
-      <button class="subcat-card is-active" type="button" data-subcat-filter="all"><span>All Products</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="fastener"><span>Fastener</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="hardware"><span>Hardware</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="other"><span>Other</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-    </div>
-
-    <div class="cat-grid" data-subcat-target="industrial-components">
-      <article class="prow-card" data-name="bolts" data-subcat="fastener"><div class="prow-card__media"><img src="assets/img/products/bolts.jpg" alt="Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Bolts">Enquire</button></div></article>
-      <article class="prow-card" data-name="washers" data-subcat="fastener"><div class="prow-card__media"><img src="assets/img/products/washers.jpg" alt="Washers" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Washers</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Washers">Enquire</button></div></article>
-      <article class="prow-card" data-name="nuts" data-subcat="fastener"><div class="prow-card__media"><img src="assets/img/products/nuts.jpg" alt="Nuts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Nuts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Nuts">Enquire</button></div></article>
-      <article class="prow-card" data-name="studs" data-subcat="fastener"><div class="prow-card__media"><img src="assets/img/products/studs.jpg" alt="Studs" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Studs</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Studs">Enquire</button></div></article>
-      <article class="prow-card" data-name="u bolts" data-subcat="fastener"><div class="prow-card__media"><img src="assets/img/products/u-bolts.jpg" alt="U Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">U Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="U Bolts">Enquire</button></div></article>
-      <article class="prow-card" data-name="eye bolts" data-subcat="fastener"><div class="prow-card__media"><img src="assets/img/products/eye-bolts.jpg" alt="Eye Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Eye Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Eye Bolts">Enquire</button></div></article>
-      <article class="prow-card" data-name="circlips" data-subcat="hardware"><div class="prow-card__media"><img src="assets/img/products/circlips.jpg" alt="Circlips" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Circlips</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Circlips">Enquire</button></div></article>
-      <article class="prow-card" data-name="shackles" data-subcat="hardware"><div class="prow-card__media"><img src="assets/img/products/shackles.jpg" alt="Shackles" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Shackles</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Shackles">Enquire</button></div></article>
-      <article class="prow-card" data-name="keys bar" data-subcat="hardware"><div class="prow-card__media"><img src="assets/img/products/keys-bar.jpg" alt="Keys Bar" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Keys Bar</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Keys Bar">Enquire</button></div></article>
-      <article class="prow-card" data-name="industrial fittings" data-subcat="other"><div class="prow-card__media"><img src="assets/img/products/industrial-fittings.jpg" alt="Industrial Fittings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Industrial Fittings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Industrial Fittings">Enquire</button></div></article>
-      <article class="prow-card" data-name="shaftings" data-subcat="other"><div class="prow-card__media"><img src="assets/img/products/shaftings.jpg" alt="Shaftings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Shaftings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Shaftings">Enquire</button></div></article>
+    <h2 class="cat-bar"><span>Pulleys, Bushes &amp; Belts</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="taper lock pulley"><div class="prow-card__media"><img src="assets/img/products/taper-lock-pulley.jpg" alt="Taper Lock Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Taper Lock Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Taper Lock Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="pilot bore pulley"><div class="prow-card__media"><img src="assets/img/products/pilot-bore-pulley.jpg" alt="Pilot Bore Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pilot Bore Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pilot Bore Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="timing belt pulley"><div class="prow-card__media"><img src="assets/img/products/timing-belt-pulley.jpg" alt="Timing Belt Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Timing Belt Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Timing Belt Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="variable pulley"><div class="prow-card__media"><img src="assets/img/products/variable-pulley.jpg" alt="Variable Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Variable Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Variable Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="flat belt pulley"><div class="prow-card__media"><img src="assets/img/products/flat-belt-pulley.jpg" alt="Flat Belt Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flat Belt Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flat Belt Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="chain pulley"><div class="prow-card__media"><img src="assets/img/products/chain-pulley.jpg" alt="Chain Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Chain Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Chain Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="multi groove pulley"><div class="prow-card__media"><img src="assets/img/products/multi-groove-pulley.jpg" alt="Multi Groove Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Multi Groove Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Multi Groove Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="step pulley"><div class="prow-card__media"><img src="assets/img/products/step-pulley.jpg" alt="Step Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Step Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Step Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="wire rope pulley"><div class="prow-card__media"><img src="assets/img/products/wire-rope-pulley.jpg" alt="Wire Rope Pulley" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Wire Rope Pulley</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Wire Rope Pulley">Enquire</button></div></article>
+      <article class="prow-card" data-name="v belt"><div class="prow-card__media"><img src="assets/img/products/v-belt.jpg" alt="V Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">V Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="V Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="timing belt"><div class="prow-card__media"><img src="assets/img/products/timing-belt.jpg" alt="Timing Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Timing Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Timing Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="multigroove belt"><div class="prow-card__media"><img src="assets/img/products/multigroove-belt.jpg" alt="Multigroove Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Multigroove Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Multigroove Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="conveyor belt"><div class="prow-card__media"><img src="assets/img/products/conveyor-belt.jpg" alt="Conveyor Belt" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Conveyor Belt</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Conveyor Belt">Enquire</button></div></article>
+      <article class="prow-card" data-name="taper lock bush"><div class="prow-card__media"><img src="assets/img/products/taper-lock-bush.jpg" alt="Taper Lock Bush" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Taper Lock Bush</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Taper Lock Bush">Enquire</button></div></article>
+      <article class="prow-card" data-name="qd bushing"><div class="prow-card__media"><img src="assets/img/products/qd-bushing.jpg" alt="QD Bushing" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">QD Bushing</h3><button class="prow-card__enquire" type="button" data-enquire data-product="QD Bushing">Enquire</button></div></article>
     </div>
   </div>
 </section>
 
-<!-- ============ CATEGORY: SEALS, RUBBER & NYLON PRODUCTS ============ -->
-<section class="cat-section" id="seals-rubber-nylon" data-cat data-cat-name="Seals, Rubber & Nylon Products">
+<section class="cat-section" id="s-couplings" data-cat data-cat-name="Couplings">
   <div class="container">
-    <h2 class="cat-bar"><span>Seals, Rubber &amp; Nylon Products</span></h2>
-
-    <div class="subcat-grid" data-subcat-group="seals-rubber-nylon">
-      <button class="subcat-card is-active" type="button" data-subcat-filter="all"><span>All Products</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="seal"><span>Seal</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="rubber"><span>Rubber</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-      <button class="subcat-card" type="button" data-subcat-filter="nylon"><span>Nylon</span><svg class="icon"><use href="#i-arrow"/></svg></button>
-    </div>
-
-    <div class="cat-grid" data-subcat-target="seals-rubber-nylon">
-      <article class="prow-card" data-name="oil seals type 1" data-subcat="seal"><div class="prow-card__media"><img src="assets/img/products/oil-seals-type-1.jpg" alt="Oil Seals (Type 1)" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Oil Seals (Type 1)</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Oil Seals (Type 1)">Enquire</button></div></article>
-      <article class="prow-card" data-name="oil seals type 2" data-subcat="seal"><div class="prow-card__media"><img src="assets/img/products/oil-seals-type-2.jpg" alt="Oil Seals (Type 2)" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Oil Seals (Type 2)</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Oil Seals (Type 2)">Enquire</button></div></article>
-      <article class="prow-card" data-name="o-rings" data-subcat="seal"><div class="prow-card__media"><img src="assets/img/products/o-rings-2.jpg" alt="O-Rings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">O-Rings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="O-Rings">Enquire</button></div></article>
-      <article class="prow-card" data-name="v-rings" data-subcat="seal"><div class="prow-card__media"><img src="assets/img/products/v-rings.jpg" alt="V-Rings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">V-Rings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="V-Rings">Enquire</button></div></article>
-      <article class="prow-card" data-name="anti vibration rubber mounts" data-subcat="rubber"><div class="prow-card__media"><img src="assets/img/products/anti-vibration-rubber-mounts.jpg" alt="Anti Vibration Rubber Mounts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Anti Vibration Rubber Mounts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Anti Vibration Rubber Mounts">Enquire</button></div></article>
-      <article class="prow-card" data-name="rubber impellers" data-subcat="rubber"><div class="prow-card__media"><img src="assets/img/products/rubber-impellers.jpg" alt="Rubber Impellers" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Rubber Impellers</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Rubber Impellers">Enquire</button></div></article>
-      <article class="prow-card" data-name="nylon bushes and sheets" data-subcat="nylon"><div class="prow-card__media"><img src="assets/img/products/nylon-bushes-and-sheets.jpg" alt="Nylon Bushes & Sheets" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Nylon Bushes & Sheets</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Nylon Bushes & Sheets">Enquire</button></div></article>
+    <h2 class="cat-bar"><span>Couplings</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="disc coupling"><div class="prow-card__media"><img src="assets/img/products/disc-coupling.jpg" alt="Disc Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Disc Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Disc Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="flexible coupling"><div class="prow-card__media"><img src="assets/img/products/flexible-coupling.jpg" alt="Flexible Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flexible Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flexible Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="gear coupling"><div class="prow-card__media"><img src="assets/img/products/gear-coupling.jpg" alt="Gear Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Gear Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Gear Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="pin &amp; bush coupling"><div class="prow-card__media"><img src="assets/img/products/pin-bush-coupling.jpg" alt="Pin &amp; Bush Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pin &amp; Bush Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pin &amp; Bush Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="h type coupling"><div class="prow-card__media"><img src="assets/img/products/h-type-coupling.jpg" alt="H Type Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">H Type Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="H Type Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="hrc coupling"><div class="prow-card__media"><img src="assets/img/products/hrc-coupling.jpg" alt="HRC Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">HRC Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="HRC Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="nm coupling"><div class="prow-card__media"><img src="assets/img/products/nm-coupling.jpg" alt="NM Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">NM Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="NM Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="jaw coupling"><div class="prow-card__media"><img src="assets/img/products/jaw-coupling.jpg" alt="Jaw Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Jaw Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Jaw Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="sureflex coupling"><div class="prow-card__media"><img src="assets/img/products/sureflex-coupling.jpg" alt="Sureflex Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Sureflex Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Sureflex Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="tyre coupling"><div class="prow-card__media"><img src="assets/img/products/tyre-coupling.jpg" alt="Tyre Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Tyre Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Tyre Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="grid coupling"><div class="prow-card__media"><img src="assets/img/products/grid-coupling.jpg" alt="Grid Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Grid Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Grid Coupling">Enquire</button></div></article>
+      <article class="prow-card" data-name="rotex coupling"><div class="prow-card__media"><img src="assets/img/products/rotex-coupling.jpg" alt="Rotex Coupling" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Rotex Coupling</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Rotex Coupling">Enquire</button></div></article>
     </div>
   </div>
 </section>
+
+<section class="cat-section" id="s-motors-gearbox" data-cat data-cat-name="Motors &amp; Gear Box">
+  <div class="container">
+    <h2 class="cat-bar"><span>Motors &amp; Gear Box</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="foot mounted motor"><div class="prow-card__media"><img src="assets/img/products/foot-mounted-motor.jpg" alt="Foot Mounted Motor" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Foot Mounted Motor</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Foot Mounted Motor">Enquire</button></div></article>
+      <article class="prow-card" data-name="flange mounted motor"><div class="prow-card__media"><img src="assets/img/products/flange-mounted-motor.jpg" alt="Flange Mounted Motor" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flange Mounted Motor</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flange Mounted Motor">Enquire</button></div></article>
+      <article class="prow-card" data-name="shaft mounted gearbox"><div class="prow-card__media"><img src="assets/img/products/shaft-mounted-gearbox.jpg" alt="Shaft Mounted Gearbox" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Shaft Mounted Gearbox</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Shaft Mounted Gearbox">Enquire</button></div></article>
+      <article class="prow-card" data-name="flange mounted gearbox"><div class="prow-card__media"><img src="assets/img/products/flange-mounted-gearbox.jpg" alt="Flange Mounted Gearbox" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flange Mounted Gearbox</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flange Mounted Gearbox">Enquire</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="cat-section" id="s-sprockets-chains" data-cat data-cat-name="Sprockets &amp; Chains">
+  <div class="container">
+    <h2 class="cat-bar"><span>Sprockets &amp; Chains</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="simple sprocket"><div class="prow-card__media"><img src="assets/img/products/simple-sprocket.jpg" alt="Simple Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Simple Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Simple Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="duplex sprocket"><div class="prow-card__media"><img src="assets/img/products/duplex-sprocket.jpg" alt="Duplex Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Duplex Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Duplex Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="triplex sprocket"><div class="prow-card__media"><img src="assets/img/products/triplex-sprocket.jpg" alt="Triplex Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Triplex Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Triplex Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="double single sprocket"><div class="prow-card__media"><img src="assets/img/products/double-single-sprocket.jpg" alt="Double Single Sprocket" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Double Single Sprocket</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Double Single Sprocket">Enquire</button></div></article>
+      <article class="prow-card" data-name="attachment chains"><div class="prow-card__media"><img src="assets/img/products/attachment-chains.jpg" alt="Attachment Chains" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Attachment Chains</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Attachment Chains">Enquire</button></div></article>
+      <article class="prow-card" data-name="roller chain"><div class="prow-card__media"><img src="assets/img/products/roller-chain.jpg" alt="Roller Chain" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Roller Chain</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Roller Chain">Enquire</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="cat-section" id="s-gears-shafts" data-cat data-cat-name="Gears &amp; Shafts">
+  <div class="container">
+    <h2 class="cat-bar"><span>Gears &amp; Shafts</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="helical gears"><div class="prow-card__media"><img src="assets/img/products/helical-gears.jpg" alt="Helical Gears" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Helical Gears</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Helical Gears">Enquire</button></div></article>
+      <article class="prow-card" data-name="spline shaft"><div class="prow-card__media"><img src="assets/img/products/spline-shaft.jpg" alt="Spline Shaft" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Spline Shaft</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Spline Shaft">Enquire</button></div></article>
+      <article class="prow-card" data-name="herringbone"><div class="prow-card__media"><img src="assets/img/products/herringbone.jpg" alt="Herringbone" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Herringbone</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Herringbone">Enquire</button></div></article>
+      <article class="prow-card" data-name="machine shafts"><div class="prow-card__media"><img src="assets/img/products/machine-shafts.jpg" alt="Machine Shafts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Machine Shafts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Machine Shafts">Enquire</button></div></article>
+      <article class="prow-card" data-name="pinion and rack gear"><div class="prow-card__media"><img src="assets/img/products/pinion-and-rack-gear.jpg" alt="Pinion and Rack Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Pinion and Rack Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Pinion and Rack Gear">Enquire</button></div></article>
+      <article class="prow-card" data-name="worm gear"><div class="prow-card__media"><img src="assets/img/products/worm-gear.jpg" alt="Worm Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Worm Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Worm Gear">Enquire</button></div></article>
+      <article class="prow-card" data-name="spur gear"><div class="prow-card__media"><img src="assets/img/products/spur-gear.jpg" alt="Spur Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Spur Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Spur Gear">Enquire</button></div></article>
+      <article class="prow-card" data-name="spiral bevel gear"><div class="prow-card__media"><img src="assets/img/products/spiral-bevel-gear.jpg" alt="Spiral Bevel Gear" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Spiral Bevel Gear</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Spiral Bevel Gear">Enquire</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="cat-section" id="s-seals-rubber" data-cat data-cat-name="Seals &amp; Customised Rubber Products">
+  <div class="container">
+    <h2 class="cat-bar"><span>Seals &amp; Customised Rubber Products</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="v rings"><div class="prow-card__media"><img src="assets/img/products/v-rings.jpg" alt="V Rings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">V Rings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="V Rings">Enquire</button></div></article>
+      <article class="prow-card" data-name="seal kits"><div class="prow-card__media"><img src="assets/img/products/seal-kits.jpg" alt="Seal Kits" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Seal Kits</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Seal Kits">Enquire</button></div></article>
+      <article class="prow-card" data-name="mechanical seals"><div class="prow-card__media"><img src="assets/img/products/mechanical-seals.jpg" alt="Mechanical Seals" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Mechanical Seals</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Mechanical Seals">Enquire</button></div></article>
+      <article class="prow-card" data-name="anti vibration rubber mounts"><div class="prow-card__media"><img src="assets/img/products/anti-vibration-rubber-mounts.jpg" alt="Anti Vibration Rubber Mounts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Anti Vibration Rubber Mounts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Anti Vibration Rubber Mounts">Enquire</button></div></article>
+      <article class="prow-card" data-name="rubber impellers"><div class="prow-card__media"><img src="assets/img/products/rubber-impellers.jpg" alt="Rubber Impellers" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Rubber Impellers</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Rubber Impellers">Enquire</button></div></article>
+      <article class="prow-card" data-name="nbr seals"><div class="prow-card__media"><img src="assets/img/products/nbr-seals.jpg" alt="NBR Seals" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">NBR Seals</h3><button class="prow-card__enquire" type="button" data-enquire data-product="NBR Seals">Enquire</button></div></article>
+      <article class="prow-card" data-name="viton oil seals"><div class="prow-card__media"><img src="assets/img/products/viton-oil-seals.jpg" alt="Viton Oil Seals" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Viton Oil Seals</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Viton Oil Seals">Enquire</button></div></article>
+      <article class="prow-card" data-name="o rings"><div class="prow-card__media"><img src="assets/img/products/o-rings.jpg" alt="O Rings" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">O Rings</h3><button class="prow-card__enquire" type="button" data-enquire data-product="O Rings">Enquire</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="cat-section" id="s-fasteners" data-cat data-cat-name="Fasteners">
+  <div class="container">
+    <h2 class="cat-bar"><span>Fasteners</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="bolts"><div class="prow-card__media"><img src="assets/img/products/bolts.jpg" alt="Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Bolts">Enquire</button></div></article>
+      <article class="prow-card" data-name="washers"><div class="prow-card__media"><img src="assets/img/products/washers.jpg" alt="Washers" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Washers</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Washers">Enquire</button></div></article>
+      <article class="prow-card" data-name="nuts"><div class="prow-card__media"><img src="assets/img/products/nuts.jpg" alt="Nuts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Nuts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Nuts">Enquire</button></div></article>
+      <article class="prow-card" data-name="studs"><div class="prow-card__media"><img src="assets/img/products/studs.jpg" alt="Studs" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Studs</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Studs">Enquire</button></div></article>
+      <article class="prow-card" data-name="u bolts"><div class="prow-card__media"><img src="assets/img/products/u-bolts.jpg" alt="U Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">U Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="U Bolts">Enquire</button></div></article>
+      <article class="prow-card" data-name="eye bolts"><div class="prow-card__media"><img src="assets/img/products/eye-bolts.jpg" alt="Eye Bolts" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Eye Bolts</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Eye Bolts">Enquire</button></div></article>
+      <article class="prow-card" data-name="circlips"><div class="prow-card__media"><img src="assets/img/products/circlips.jpg" alt="Circlips" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Circlips</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Circlips">Enquire</button></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="cat-section" id="s-metals" data-cat data-cat-name="Ferrous &amp; Non-Ferrous Metals">
+  <div class="container">
+    <h2 class="cat-bar"><span>Ferrous &amp; Non-Ferrous Metals</span></h2>
+    <div class="cat-grid">
+      <article class="prow-card" data-name="angle bars"><div class="prow-card__media"><img src="assets/img/products/angle-bars.jpg" alt="Angle Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Angle Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Angle Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="flat bars"><div class="prow-card__media"><img src="assets/img/products/flat-bars.jpg" alt="Flat Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Flat Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Flat Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="hexagon bars"><div class="prow-card__media"><img src="assets/img/products/hexagon-bars.jpg" alt="Hexagon Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Hexagon Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Hexagon Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="round bars"><div class="prow-card__media"><img src="assets/img/products/round-bars.jpg" alt="Round Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Round Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Round Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="square bars"><div class="prow-card__media"><img src="assets/img/products/square-bars.jpg" alt="Square Bars" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Square Bars</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Square Bars">Enquire</button></div></article>
+      <article class="prow-card" data-name="sheets"><div class="prow-card__media"><img src="assets/img/products/sheets.jpg" alt="Sheets" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Sheets</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Sheets">Enquire</button></div></article>
+      <article class="prow-card" data-name="nylon bushes &amp; sheets"><div class="prow-card__media"><img src="assets/img/products/nylon-bushes-and-sheets.jpg" alt="Nylon Bushes &amp; Sheets" width="480" height="378" loading="lazy"></div><div class="prow-card__head"><h3 class="prow-card__name">Nylon Bushes &amp; Sheets</h3><button class="prow-card__enquire" type="button" data-enquire data-product="Nylon Bushes &amp; Sheets">Enquire</button></div></article>
+    </div>
+  </div>
+</section>
+
+</div>
 
 <!-- ============ BRANDS WE DEAL IN ============ -->
 <section class="brands">
@@ -394,11 +481,9 @@
         <h4 class="footer__title">Products</h4>
         <ul class="footer__links">
           <li><a href="#power-transmission">Power Transmission Products</a></li>
-          <li><a href="#couplings-gear">Couplings &amp; Gear Components</a></li>
-          <li><a href="#mechanical-seals">Mechanical Seals &amp; Accessories</a></li>
-          <li><a href="#bearings-housings">Bearings &amp; Housings</a></li>
-          <li><a href="#industrial-components">Industrial Components</a></li>
-          <li><a href="#seals-rubber-nylon">Seals, Rubber &amp; Nylon</a></li>
+          <li><a href="#seals-rubber">Seals &amp; Customised Rubber Products</a></li>
+          <li><a href="#fasteners">Fasteners</a></li>
+          <li><a href="#metals">Ferrous &amp; Non-Ferrous Metals</a></li>
         </ul>
       </div>
       <div>
@@ -439,11 +524,14 @@
           <select id="eqProduct" name="product">
             <option value="">Select a category</option>
             <option>Power Transmission Products</option>
-            <option>Couplings &amp; Gear Components</option>
-            <option>Mechanical Seals &amp; Accessories</option>
-            <option>Bearings &amp; Housings</option>
-            <option>Industrial Components</option>
-            <option>Seals, Rubber &amp; Nylon Products</option>
+            <option>Pulleys, Bushes &amp; Belts</option>
+            <option>Couplings</option>
+            <option>Motors &amp; Gear Box</option>
+            <option>Sprockets &amp; Chains</option>
+            <option>Gears &amp; Shafts</option>
+            <option>Seals &amp; Customised Rubber Products</option>
+            <option>Fasteners</option>
+            <option>Ferrous &amp; Non-Ferrous Metals</option>
             <option>Other / Not listed</option>
           </select>
         </div>
