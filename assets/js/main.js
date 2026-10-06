@@ -346,8 +346,8 @@
   var catNavBar = $('.cat-nav');
 
   /* ---------- Floating category side-nav (products.html) ---------- */
-  var catSides = $('.cat-side');
-  var catSecAll = $('.cat-section');
+  var catSides = $$('.cat-side');
+  var catSecAll = $$('.cat-section');
   if (catSides.length && catNavBar) {
     function onCatScroll() {
       var barBottom = catNavBar.getBoundingClientRect().bottom;
