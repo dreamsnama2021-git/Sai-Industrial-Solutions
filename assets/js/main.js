@@ -346,11 +346,14 @@
   var catNavBar = $('.cat-nav');
 
   /* ---------- Floating category side-nav (products.html) ---------- */
-  var catSides = $$('.cat-side');
+  var catSides = $('.cat-side');
+  var catSecAll = $('.cat-section');
   if (catSides.length && catNavBar) {
     function onCatScroll() {
       var barBottom = catNavBar.getBoundingClientRect().bottom;
-      catSides.forEach(function (n) { n.classList.toggle('is-visible', barBottom < 0); });
+      var lastCat = catSecAll[catSecAll.length - 1];
+      var pastCats = lastCat && lastCat.getBoundingClientRect().bottom < window.innerHeight * 0.4;
+      catSides.forEach(function (n) { n.classList.toggle('is-visible', barBottom < 0 && !pastCats); });
     }
     window.addEventListener('scroll', onCatScroll, { passive: true });
     window.addEventListener('resize', onCatScroll);
