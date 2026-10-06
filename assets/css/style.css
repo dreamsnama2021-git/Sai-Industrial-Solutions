@@ -133,6 +133,7 @@ button { font: inherit; color: inherit; }
 .site-header.is-sticky .brand__logo-wrap:not(.brand__logo-wrap--lg) .brand__logo { height: 40px; }
 .brand__logo { transition: height .3s; }
 .site-header.is-sticky .nav a { padding-block: 24px; }
+.site-header .nav .sub a, .site-header.is-sticky .nav .sub a { padding-block: 8px; line-height: 1.35; }
 @keyframes slideDown { from { transform: translateY(-100%); } to { transform: none; } }
 
 /* ---------- Info panel + overlay ---------- */
