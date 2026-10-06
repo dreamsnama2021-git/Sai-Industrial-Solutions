@@ -343,34 +343,7 @@
     drop.addEventListener('focusout', scheduleClose);
   });
 
-  /* ---------- 4 / 8 category view switch (products.html) ---------- */
-  var viewBtns = $$('[data-view-btn]');
   var catNavBar = $('.cat-nav');
-  function setView(v, keepScroll) {
-    $$('[data-view]').forEach(function (el) { el.hidden = el.getAttribute('data-view') !== v; });
-    viewBtns.forEach(function (b) {
-      var on = b.getAttribute('data-view-btn') === v;
-      b.classList.toggle('is-active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-    $$('.cat-pill__drop').forEach(function (d) { d.classList.remove('is-open'); });
-    if (!keepScroll && catNavBar) {
-      var top = catNavBar.getBoundingClientRect().bottom + window.scrollY;
-      if (window.scrollY > top) window.scrollTo({ top: top, behavior: 'auto' });
-    }
-  }
-  if (viewBtns.length) {
-    viewBtns.forEach(function (b) {
-      b.addEventListener('click', function () { setView(b.getAttribute('data-view-btn')); });
-    });
-    // deep links such as products.html#s-couplings open the matching view
-    var hashTarget = location.hash.length > 1 ? document.getElementById(location.hash.slice(1)) : null;
-    var hashView = hashTarget && hashTarget.closest('[data-view]');
-    if (hashView && hashView.getAttribute('data-view') !== '4') {
-      setView(hashView.getAttribute('data-view'), true);
-      hashTarget.scrollIntoView();
-    }
-  }
 
   /* ---------- Floating category side-nav (products.html) ---------- */
   var catSides = $$('.cat-side');

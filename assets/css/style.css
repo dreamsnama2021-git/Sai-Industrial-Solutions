@@ -311,6 +311,8 @@ button { font: inherit; color: inherit; }
 }
 .pcard:hover, .pcard:focus-within { flex-grow: 2.6; }
 .pcard img { width: 100%; height: 100%; object-fit: cover; }
+/* last row of 2: an empty 3rd slot keeps tile width + hover-expand identical to the rows above */
+.pgrid__row--2::after { content: ""; flex: 1 1 0%; min-width: 0; }
 .pcard__over {
   position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
   padding: 20px; text-align: center; color: #fff; background: rgba(0, 17, 52, .74); opacity: 0; transition: opacity .35s;
@@ -591,6 +593,7 @@ button { font: inherit; color: inherit; }
   .industries__grid { grid-template-columns: repeat(2, 1fr); gap: 22px 16px; }
   .ind-card__label { font-size: 17px; margin-top: 12px; }
   .pgrid__row { flex-direction: column; height: auto; gap: 12px; }
+  .pgrid__row--2::after { display: none; }
   .pcard { flex-basis: auto !important; aspect-ratio: 4 / 3; }
   .pcard:hover { flex-grow: 1; }
   .about__media { padding: 26px 20px 90px 0; }
@@ -639,17 +642,6 @@ button { font: inherit; color: inherit; }
   transition: background .2s, color .2s, border-color .2s;
 }
 .cat-pills a:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
-[data-view][hidden] { display: none !important; }
-.cat-nav__inner { row-gap: 18px; }
-.view-switch { flex: 1 1 100%; display: flex; align-items: center; gap: 8px; }
-.view-switch__label { font: 500 11px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--text); margin-right: 4px; }
-.view-switch__btn {
-  padding: 8px 18px; font: 600 12px/1.2 var(--font-body); letter-spacing: .02em; cursor: pointer;
-  color: var(--ink); background: #fff; border: 1.5px solid var(--navy); border-radius: 20px;
-  transition: background .2s, color .2s;
-}
-.view-switch__btn:hover { background: var(--bg-2); }
-.view-switch__btn.is-active { background: var(--navy); color: #fff; }
 @media (min-width: 768px) {
   .cat-nav { position: static; box-shadow: none; }
 }
