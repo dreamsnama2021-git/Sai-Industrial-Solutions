@@ -63,22 +63,8 @@
       if (isMobileNav() && !a.parentElement.classList.contains('has-sub')) setNav(false);
     });
   });
+  $$('.nav__cta [data-enquire]', nav).forEach(function (b) { b.addEventListener('click', function () { setNav(false); }); });
   window.addEventListener('resize', function () { if (!isMobileNav()) setNav(false); });
-
-  /* ---------- Info side panel ---------- */
-  var panel = $('#infoPanel');
-  var overlay = $('#overlay');
-  function setPanel(open) {
-    panel.classList.toggle('is-open', open);
-    panel.setAttribute('aria-hidden', String(!open));
-    overlay.hidden = !open;
-    document.body.classList.toggle('no-scroll', open);
-    if (open) $('#infoClose').focus(); else $('#infoBtn').focus();
-  }
-  $('#infoBtn').addEventListener('click', function () { setPanel(true); });
-  $('#infoClose').addEventListener('click', function () { setPanel(false); });
-  overlay.addEventListener('click', function () { setPanel(false); });
-  $$('[data-enquire]', panel).forEach(function (b) { b.addEventListener('click', function () { setPanel(false); }); });
 
   /* ---------- Modals (enquiry + video) ---------- */
   var lastFocus = null;
@@ -111,7 +97,6 @@
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     $$('.modal').forEach(function (m) { if (!m.hidden) closeModal(m); });
-    if (panel.classList.contains('is-open')) setPanel(false);
     if (nav.classList.contains('is-open')) setNav(false);
   });
 
