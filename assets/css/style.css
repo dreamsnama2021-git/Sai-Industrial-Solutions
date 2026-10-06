@@ -490,6 +490,8 @@ button { font: inherit; color: inherit; }
 .newsletter { display: grid; gap: 10px; justify-items: start; }
 .newsletter input { width: 100%; padding: 12px 14px; border: 0; background: #fff; color: var(--ink); font: 13px var(--font-body); }
 .footer__bottom { border-top: 1px solid rgba(255, 255, 255, .16); padding: 22px 0; text-align: center; font-size: 12px; }
+.footer__bottom a { color: var(--gold); font-weight: 500; transition: color .25s; }
+.footer__bottom a:hover { color: var(--gold-hover); text-decoration: underline; }
 
 /* ---------- Modal + form ---------- */
 .modal { position: fixed; inset: 0; z-index: 300; padding: 16px; overflow-y: auto; background: rgba(0, 17, 52, .75); }
