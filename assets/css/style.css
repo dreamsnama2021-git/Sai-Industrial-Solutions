@@ -730,7 +730,7 @@ button { font: inherit; color: inherit; }
 /* ---------- Clients pill (homepage): label + circular logo badges scrolling ---------- */
 .clients-pill { padding: 10px 0 80px; }
 .clients-pill__box {
-  display: flex; align-items: center; gap: 32px; padding: 26px 44px;
+  display: flex; align-items: center; gap: 32px; padding: 26px 0;
 }
 .clients-pill__label {
   flex: none; max-width: 230px; padding-right: 32px; border-right: 1px solid var(--line);
