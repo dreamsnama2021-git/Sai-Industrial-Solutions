@@ -769,6 +769,27 @@ button { font: inherit; color: inherit; }
   .clients-pill__track li { width: 150px; height: 80px; margin-right: 14px; padding: 12px 16px; }
 }
 
+/* ---------- Services page ---------- */
+.svc-intro { padding-bottom: 20px; }
+.svc-detail { padding: 50px 0; }
+.svc-detail__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.svc-detail--rev .svc-detail__media { order: 2; }
+.svc-detail__media { position: relative; }
+.svc-detail__media::before { content: ''; position: absolute; top: -14px; left: -14px; width: 55%; height: 55%; border: 2px solid var(--gold); z-index: 0; }
+.svc-detail--rev .svc-detail__media::before { left: auto; right: -14px; }
+.svc-detail__media img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; box-shadow: 0 24px 46px rgba(0, 17, 52, .16); }
+.svc-detail__num { display: block; font: 500 54px/1 var(--font-head); color: var(--gold); opacity: .55; margin-bottom: 6px; }
+.svc-detail__text .title { margin-bottom: 14px; }
+.svc-detail__text > p { font-size: 14px; line-height: 1.75; margin-bottom: 18px; }
+.checks { display: grid; gap: 10px; margin-bottom: 28px; }
+.checks li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--ink); line-height: 1.5; }
+.checks .icon { flex: none; width: 18px; height: 18px; margin-top: 2px; color: var(--gold-dk); }
+@media (max-width: 991px) {
+  .svc-detail__grid { grid-template-columns: 1fr; gap: 36px; }
+  .svc-detail--rev .svc-detail__media { order: 0; }
+  .svc-detail { padding: 36px 0; }
+}
+
 /* ---------- Back-to-top ---------- */
 .back-top {
   position: fixed; right: 22px; bottom: 114px; z-index: 60;
