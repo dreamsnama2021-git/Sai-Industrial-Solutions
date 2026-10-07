@@ -333,12 +333,30 @@
   /* ---------- Floating category side-nav (products.html) ---------- */
   var catSides = $$('.cat-side');
   var catSecAll = $$('.cat-section');
+  var catFab = $('#catFab');
+  function setCatSheet(open) {
+    catSides.forEach(function (n) { n.classList.toggle('is-open', open); });
+    if (catFab) catFab.setAttribute('aria-expanded', String(open));
+  }
+  if (catFab) {
+    catFab.addEventListener('click', function () { setCatSheet(catFab.getAttribute('aria-expanded') !== 'true'); });
+    catSides.forEach(function (n) {
+      $$('a', n).forEach(function (a) { a.addEventListener('click', function () { setCatSheet(false); }); });
+    });
+    document.addEventListener('click', function (e) {
+      if (catFab.getAttribute('aria-expanded') === 'true' && !e.target.closest('#catFab, .cat-side')) setCatSheet(false);
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setCatSheet(false); });
+  }
   if (catSides.length && catNavBar) {
     function onCatScroll() {
       var barBottom = catNavBar.getBoundingClientRect().bottom;
       var lastCat = catSecAll[catSecAll.length - 1];
       var pastCats = lastCat && lastCat.getBoundingClientRect().bottom < window.innerHeight * 0.4;
-      catSides.forEach(function (n) { n.classList.toggle('is-visible', barBottom < 0 && !pastCats); });
+      var show = barBottom < 0 && !pastCats;
+      catSides.forEach(function (n) { n.classList.toggle('is-visible', show); });
+      if (catFab) catFab.classList.toggle('is-visible', show);
+      if (!show) setCatSheet(false);
     }
     window.addEventListener('scroll', onCatScroll, { passive: true });
     window.addEventListener('resize', onCatScroll);
