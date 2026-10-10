@@ -20,7 +20,7 @@
   --line: #dcd6ca;
   --font-head: 'Barlow', 'Arial Narrow', sans-serif;
   --font-body: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --container: 1200px;
+  --container: 1440px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -230,7 +230,7 @@ button { font: inherit; color: inherit; }
 /* ---------- 4. Services ---------- */
 .services__banner { position: relative; color: #fff; padding: 84px 0 108px; }
 .services__banner::before {
-  content: ''; position: absolute; inset: 0 calc(50% - 600px + 170px) 0 0; z-index: 0;
+  content: ''; position: absolute; inset: 0 max(0px, calc(50% - (var(--container) / 2) + 170px)) 0 0; z-index: 0;
   background: linear-gradient(90deg, rgba(0, 17, 52, .92), rgba(1, 23, 51, .74)), url('../img/placeholders/hero-products.jpg') center / cover fixed;
 }
 .services__banner-inner { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
@@ -326,7 +326,7 @@ button { font: inherit; color: inherit; }
 .testi__grid { position: relative; z-index: 1; display: grid; grid-template-columns: 5fr 7fr; gap: 30px; align-items: center; }
 .testi__text > p:last-child { font-size: 13px; }
 .testi__carousel { position: relative; z-index: 1; min-width: 0; padding-top: 58px; }
-/* Right edge bleeds all the way to the true viewport edge (not just the 1200px
+/* Right edge bleeds all the way to the true viewport edge (not just the capped-width
    .container) on wide screens — that only works because .testi__back lives directly
    in .testi (full viewport width), not nested inside the capped-width .container.
    top/height are NOT set here: they're computed in JS (main.js, syncTestiBack) from
