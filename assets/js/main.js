@@ -9,7 +9,10 @@
      If both are empty the forms run in DEMO mode: nothing is sent, the
      payload is only logged to the browser console.
      ------------------------------------------------------------------ */
-  var CONFIG = { endpoint: '', whatsapp: '' };
+  var CONFIG = { endpoint: '', whatsapp: '', mailto: 'mail@s-industrialsolutions.com' };
+  /* mailto : enquiry / contact forms open the visitor's email app with the message
+             pre-filled and addressed here (used when `endpoint` is empty).
+     The floating WhatsApp button is a plain link and does not use CONFIG. */
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -137,6 +140,13 @@
       return fetch(CONFIG.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return 'sent'; });
     }
+    if (CONFIG.mailto) {
+      var subject = payload.type === 'contact'
+        ? 'Website message' + (payload.subject ? ': ' + payload.subject : '') + ' - ' + payload.name
+        : 'Website enquiry' + ((payload.productName || payload.product) ? ': ' + (payload.productName || payload.product) : '') + ' - ' + payload.name;
+      window.location.href = 'mailto:' + CONFIG.mailto + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(summary);
+      return Promise.resolve('mailto');
+    }
     if (CONFIG.whatsapp) {
       window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(summary), '_blank', 'noopener');
       return Promise.resolve('whatsapp');
@@ -173,6 +183,8 @@
     send(payload, summary).then(function (mode) {
       if (mode === 'demo') {
         showNote(eqNote, 'Demo mode: the form works but is not connected to email/WhatsApp yet, so nothing was sent.', false);
+      } else if (mode === 'mailto') {
+        showNote(eqNote, 'Your email app is opening with your enquiry ready. Please press Send there. If nothing opens, email us at ' + CONFIG.mailto + '.', true);
       } else {
         showNote(eqNote, 'Thank you! Your enquiry has been sent. We will contact you shortly.', true);
         enquiryForm.reset();
@@ -222,6 +234,8 @@
       send(payload, summary).then(function (mode) {
         if (mode === 'demo') {
           showNote(cfNote, 'Demo mode: the form works but is not connected to email/WhatsApp yet, so nothing was sent.', false);
+        } else if (mode === 'mailto') {
+          showNote(cfNote, 'Your email app is opening with your message ready. Please press Send there. If nothing opens, email us at ' + CONFIG.mailto + '.', true);
         } else {
           showNote(cfNote, 'Thank you! Your message has been sent. We will get back to you shortly.', true);
           contactForm.reset();
