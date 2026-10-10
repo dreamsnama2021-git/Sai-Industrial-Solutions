@@ -992,9 +992,12 @@ button { font: inherit; color: inherit; }
   .about__media { right: max(0px, calc((min(100vw - 32px, var(--container)) - 1200px) / 2)); }
 }
 
-/* desktop: "About Us" watermark sits at the container's left edge and a bit higher, clear of the photo */
+/* desktop: nudge the "About Us" watermark just far enough left (and a bit up) to stop at the photo's left edge */
 @media (min-width: 992px) {
-  .about__watermark { top: 14px; left: calc((100% - min(100% - 32px, var(--container))) / 2); right: auto; text-align: left; }
+  .about__watermark {
+    top: 14px; left: 0; text-align: right;
+    right: calc(100% - ((100% + min(100% - 32px, var(--container))) / 2 - 500px - max(0px, (min(100% - 32px, var(--container)) - 1200px) / 2)) + 14px);
+  }
 }
 
 /* Large screens: scale all text up (--fs is multiplied into every font-size) */
