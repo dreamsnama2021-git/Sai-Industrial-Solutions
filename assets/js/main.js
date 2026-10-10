@@ -184,7 +184,7 @@
 
   /* ---------- Newsletter ---------- */
   var nl = $('#newsletter');
-  nl.addEventListener('submit', function (e) {
+  if (nl) nl.addEventListener('submit', function (e) {
     e.preventDefault();
     var note = $('#nlNote');
     var input = $('#nlEmail');
