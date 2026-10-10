@@ -396,7 +396,16 @@
   /* ---------- Back-to-top button ---------- */
   var backTop = $('#backTop');
   if (backTop) {
-    window.addEventListener('scroll', function () { backTop.hidden = window.scrollY < 800; }, { passive: true });
+    var siteFooter = $('.footer');
+    function updateBackTop() {
+      backTop.hidden = window.scrollY < 800;
+      if (backTop.hidden || !siteFooter) return;
+      // over the dark footer the navy button disappears, so swap its colours (gold) there
+      var onFooter = backTop.getBoundingClientRect().bottom > siteFooter.getBoundingClientRect().top;
+      backTop.classList.toggle('is-on-dark', onFooter);
+    }
+    window.addEventListener('scroll', updateBackTop, { passive: true });
+    window.addEventListener('resize', updateBackTop);
     backTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }); });
   }
 

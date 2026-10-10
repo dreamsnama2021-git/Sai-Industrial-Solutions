@@ -806,6 +806,8 @@ button { font: inherit; color: inherit; }
 }
 .back-top:hover { background: var(--gold); color: var(--navy-950); transform: translateY(-3px); }
 .back-top[hidden] { display: none; }
+.back-top.is-on-dark { background: var(--gold); color: var(--navy-950); box-shadow: 0 8px 20px rgba(0, 0, 0, .35); }
+.back-top.is-on-dark:hover { background: #fff; color: var(--navy-950); }
 
 /* ---------- WhatsApp floating button ---------- */
 .whatsapp-float {
