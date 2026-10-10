@@ -984,3 +984,9 @@ button { font: inherit; color: inherit; }
 
 .form-consent { margin-top: 10px; font-size: 11.5px; line-height: 1.5; color: var(--text); text-align: center; }
 .form-consent a { color: var(--navy-700); border-bottom: 1px solid var(--gold); }
+
+/* desktop: keep the About photo where it sat relative to the centred "About Us" watermark
+   when the container was 1200px (the wider container would otherwise push it right) */
+@media (min-width: 992px) {
+  .about__media { right: max(0px, calc((min(100vw - 32px, var(--container)) - 1200px) / 2)); }
+}
