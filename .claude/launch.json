@@ -4,8 +4,9 @@
     {
       "name": "sis-site",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["--yes", "http-server", ".", "-p", "5173", "-c-1", "--silent"],
-      "port": 5173
+      "runtimeArgs": ["--yes", "http-server", ".", "-c-1", "--silent"],
+      "port": 5173,
+      "autoPort": true
     }
   ]
 }
