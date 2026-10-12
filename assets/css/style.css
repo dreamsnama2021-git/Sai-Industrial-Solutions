@@ -986,12 +986,6 @@ button { font: inherit; color: inherit; }
 .form-consent { margin-top: 10px; font-size: calc(11.5px * var(--fs)); line-height: 1.5; color: var(--text); text-align: center; }
 .form-consent a { color: var(--navy-700); border-bottom: 1px solid var(--gold); }
 
-/* desktop: keep the About photo where it sat relative to the centred "About Us" watermark
-   as it did at the original 1200px container */
-@media (min-width: 992px) {
-  .about__media { right: max(0px, calc((min(100vw - 32px, var(--container)) - 1200px) / 2)); }
-}
-
 /* Large screens: scale all text up (--fs is multiplied into every font-size) */
 @media (min-width: 1500px) { :root { --fs: 1.1; } }
 @media (min-width: 1800px) { :root { --fs: 1.2; } }
@@ -999,4 +993,12 @@ button { font: inherit; color: inherit; }
 
 @media (min-width: 1500px) {
   .hero__strip { grid-template-columns: calc(300px * var(--fs) * 1.15) 1fr; }
+}
+
+/* desktop: photo sits at the container edge (clear gap to the text); "About Us" ends just 20px behind the photo so "Us" stays readable */
+@media (min-width: 992px) {
+  .about__watermark {
+    left: 0; text-align: right;
+    right: calc(100% - ((100% + min(100% - 32px, var(--container))) / 2 - 500px) - 20px);
+  }
 }
