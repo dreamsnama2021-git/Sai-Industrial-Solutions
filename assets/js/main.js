@@ -393,23 +393,6 @@
     }
   }
 
-  /* ---------- Homepage category tiles: image style switch (Option 1 / Option 2) ---------- */
-  var tileBtns = $$('[data-tiles]');
-  var tileSection = $('#products');
-  function setTiles(v) {
-    if (!tileSection) return;
-    tileSection.classList.toggle('tiles-opt2', v === '2');
-    tileBtns.forEach(function (b) {
-      var on = b.getAttribute('data-tiles') === v;
-      b.classList.toggle('is-active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-  }
-  if (tileBtns.length && tileSection) {
-    tileBtns.forEach(function (b) { b.addEventListener('click', function () { setTiles(b.getAttribute('data-tiles')); }); });
-    if (/[?&]tiles=2(&|$)/.test(location.search)) setTiles('2');
-  }
-
   /* ---------- Back-to-top button ---------- */
   var backTop = $('#backTop');
   if (backTop) {
