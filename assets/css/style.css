@@ -992,21 +992,6 @@ button { font: inherit; color: inherit; }
   .about__media { right: max(0px, calc((min(100vw - 32px, var(--container)) - 1200px) / 2)); }
 }
 
-/* desktop: "About Us" sits a little higher; its last letter tucks a bit behind the photo's top-left corner
-   (still readable). The photo is pulled up just enough so the corner overlaps the bottom of the letters. */
-@media (min-width: 992px) {
-  .about {
-    --wm-font: clamp(calc(44px * var(--fs)), 6.2vw, calc(100px * var(--fs)));
-    --about-gap: clamp(80px, 9vw, 140px);
-  }
-  .about__watermark {
-    top: 30px; left: 0; text-align: right;
-    right: calc(100% - ((100% + min(100% - 32px, var(--container))) / 2 - 500px - max(0px, (min(100% - 32px, var(--container)) - 1200px) / 2)) - 22px);
-  }
-  /* photo top = watermark box bottom (30px + font) minus the overlap (~0.22 x font of empty space under the letters + ~20px into them); 110px = section padding 72 + photo padding 38 */
-  .about__media { margin-top: calc(var(--wm-font) * 0.78 - 114px - var(--about-gap)); }
-}
-
 /* Large screens: scale all text up (--fs is multiplied into every font-size) */
 @media (min-width: 1500px) { :root { --fs: 1.1; } }
 @media (min-width: 1800px) { :root { --fs: 1.2; } }
