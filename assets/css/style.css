@@ -1002,3 +1002,21 @@ button { font: inherit; color: inherit; }
     right: calc(100% - ((100% + min(100% - 32px, var(--container))) / 2 - 500px) + 16px);
   }
 }
+
+/* ---------- Homepage category tiles: Option 1 (transparent photos on navy) / Option 2 (studio-background photos) ---------- */
+.tile-switch { display: flex; align-items: center; gap: 8px; margin: 0 0 18px; }
+.tile-switch__label { font: 500 calc(11px * var(--fs))/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--text); margin-right: 4px; }
+.tile-switch__btn { padding: 8px 16px; font: 600 calc(12px * var(--fs))/1.2 var(--font-body); cursor: pointer; color: var(--ink); background: #fff; border: 1.5px solid var(--navy); border-radius: 20px; transition: background .2s, color .2s; }
+.tile-switch__btn:hover { background: var(--bg-2); }
+.tile-switch__btn.is-active { background: var(--navy); color: #fff; }
+.pcard picture.pcard__o2 { display: none; }
+.products.tiles-opt2 .pcard picture.pcard__o1 { display: none; }
+.products.tiles-opt2 .pcard picture.pcard__o2 { display: block; width: 100%; height: 100%; }
+.products.tiles-opt2 .pcard picture.pcard__o2 img { width: 100%; height: 100%; object-fit: cover; padding: 0; }
+.products.tiles-opt2 .pcard__over { background: rgba(0, 17, 52, .74); }
+@media (max-width: 767px) {
+  .products.tiles-opt2 .pcard__over { background: linear-gradient(rgba(0, 17, 52, 0) 58%, rgba(0, 17, 52, .88)); }
+}
+@media (hover: none) {
+  .products.tiles-opt2 .pcard__over { background: linear-gradient(rgba(0, 17, 52, 0) 58%, rgba(0, 17, 52, .88)); }
+}
