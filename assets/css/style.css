@@ -952,20 +952,22 @@ button { font: inherit; color: inherit; }
   .about__img { aspect-ratio: 1 / .9; }
 }
 
-/* phones: homepage category tiles in 2 columns - whole product visible, whole tile is the link (no button) */
-@media (max-width: 767px) {
-  .pgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .pgrid__row { display: contents; }
-  .pgrid__row--2::after { display: none; }
-  .pcard { aspect-ratio: 1 / 1.1; flex: none; min-width: 0; }
-  .pcard:hover, .pcard:focus-within { flex-grow: 0; }
-  .pcard picture { display: block; width: 100%; height: 100%; }
-  .pcard img { object-fit: contain; padding: 6px 6px 44px; }
-  .pcard__over { opacity: 1; justify-content: flex-end; padding: 0 6px 10px; gap: 0; background: linear-gradient(rgba(0, 17, 52, 0) 72%, rgba(0, 17, 52, .9)); }
-  .pcard__over h3 { font-size: calc(14px * var(--fs)); line-height: 1.2; }
-  .pcard__over .btn { position: absolute; inset: 0; z-index: 3; width: auto; padding: 0; border: 0; background: transparent; font-size: 0; color: transparent; }
+/* Homepage category tiles: ONE card size on every device (156 x 172).
+   Phone = 2 per row, tablet/desktop = 4 per row (2 rows of 4). Whole tile is the link, no button. */
+.pgrid { display: grid; grid-template-columns: repeat(auto-fit, 156px); gap: 12px; justify-content: center; max-width: 660px; margin-inline: auto; }
+.pgrid__row { display: contents; }
+.pgrid__row--2::after { display: none; }
+.pcard { width: 156px; height: auto; aspect-ratio: 1 / 1.1; flex: none; min-width: 0; }
+.pcard:hover, .pcard:focus-within { flex-grow: 0; }
+.pcard picture { display: block; width: 100%; height: 100%; }
+.pcard img { object-fit: contain; padding: 6px 6px 44px; }
+.pcard__over { opacity: 1; justify-content: flex-end; padding: 0 6px 10px; gap: 0; background: linear-gradient(rgba(0, 17, 52, 0) 72%, rgba(0, 17, 52, .9)); }
+.pcard__over h3 { font-size: 14px; line-height: 1.2; transform: none; }
+.pcard__over .btn { position: absolute; inset: 0; z-index: 3; width: auto; padding: 0; border: 0; background: transparent; font-size: 0; color: transparent; }
+@media (max-width: 355px) {
+  .pgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pcard { width: auto; }
 }
-
 /* ---------- Privacy policy page ---------- */
 .policy { padding: 70px 0 90px; }
 .policy__inner { max-width: 860px; }
