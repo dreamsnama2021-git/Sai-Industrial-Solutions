@@ -995,10 +995,10 @@ button { font: inherit; color: inherit; }
   .hero__strip { grid-template-columns: calc(300px * var(--fs) * 1.15) 1fr; }
 }
 
-/* desktop: photo sits at the container edge (clear gap to the text); "About Us" ends just 20px behind the photo so "Us" stays readable */
+/* desktop: photo sits at the container edge (clear gap to the text); "About Us" sits a bit higher and ends 16px before the photo */
 @media (min-width: 992px) {
   .about__watermark {
-    left: 0; text-align: right;
-    right: calc(100% - ((100% + min(100% - 32px, var(--container))) / 2 - 500px) - 20px);
+    top: 58px; left: 0; text-align: right;
+    right: calc(100% - ((100% + min(100% - 32px, var(--container))) / 2 - 500px) + 16px);
   }
 }
