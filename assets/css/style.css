@@ -782,10 +782,10 @@ button { font: inherit; color: inherit; }
 .svc-detail { padding: 50px 0; }
 .svc-detail__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .svc-detail--rev .svc-detail__media { order: 2; }
-.svc-detail__media { position: relative; }
+.svc-detail__media { position: relative; width: 100%; max-width: 540px; margin-inline: auto; }
 .svc-detail__media::before { content: ''; position: absolute; top: -14px; left: -14px; width: 55%; height: 55%; border: 2px solid var(--gold); z-index: 0; }
 .svc-detail--rev .svc-detail__media::before { left: auto; right: -14px; }
-.svc-detail__media img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; box-shadow: 0 24px 46px rgba(0, 17, 52, .16); }
+.svc-detail__media img { position: relative; z-index: 1; display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; box-shadow: 0 24px 46px rgba(0, 17, 52, .16); }
 .svc-detail__num { display: block; font: 500 calc(54px * var(--fs))/1 var(--font-head); color: var(--gold); opacity: .55; margin-bottom: 6px; }
 .svc-detail__text .title { margin-bottom: 14px; }
 .svc-detail__text > p { font-size: calc(14px * var(--fs)); line-height: 1.75; margin-bottom: 18px; }
