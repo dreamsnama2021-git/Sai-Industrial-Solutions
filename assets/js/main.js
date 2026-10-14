@@ -9,7 +9,11 @@
      If both are empty the forms run in DEMO mode: nothing is sent, the
      payload is only logged to the browser console.
      ------------------------------------------------------------------ */
-  var CONFIG = { endpoint: '', whatsapp: '', mailto: 'mail@s-industrialsolutions.com' };
+  var CONFIG = { endpoint: '', whatsapp: '', mailto: 'mail@s-industrialsolutions.com', web3formsKey: '' };
+  /* web3formsKey : free access key from https://web3forms.com (sent to the inbox you register).
+                    When set, enquiry/contact forms are delivered straight to that inbox with no
+                    email app needed; when empty, the forms fall back to opening the visitor's
+                    email app (mailto). */
   /* mailto : enquiry / contact forms open the visitor's email app with the message
              pre-filled and addressed here (used when `endpoint` is empty).
      The floating WhatsApp button is a plain link and does not use CONFIG. */
@@ -139,6 +143,26 @@
     if (CONFIG.endpoint) {
       return fetch(CONFIG.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return 'sent'; });
+    }
+    if (CONFIG.web3formsKey) {
+      var isContact = payload.type === 'contact';
+      var body = {
+        access_key: CONFIG.web3formsKey,
+        subject: (isContact ? 'Website message' : 'Website enquiry') + ' - ' + payload.name,
+        from_name: 'Sai Industrial Solutions website',
+        name: payload.name,
+        phone: payload.phone,
+        message: summary
+      };
+      if (payload.email) body.email = payload.email;
+      return fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(body)
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        if (!j || !j.success) throw new Error((j && j.message) || 'send failed');
+        return 'sent';
+      });
     }
     if (CONFIG.mailto) {
       var subject = payload.type === 'contact'
