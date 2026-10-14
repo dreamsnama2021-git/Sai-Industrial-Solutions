@@ -185,6 +185,7 @@
         showNote(eqNote, 'Demo mode: the form works but is not connected to email/WhatsApp yet, so nothing was sent.', false);
       } else if (mode === 'mailto') {
         showNote(eqNote, 'Your email app is opening with your enquiry ready. Please press Send there. If nothing opens, email us at ' + CONFIG.mailto + '.', true);
+        enquiryForm.reset();
       } else {
         showNote(eqNote, 'Thank you! Your enquiry has been sent. We will contact you shortly.', true);
         enquiryForm.reset();
@@ -236,6 +237,7 @@
           showNote(cfNote, 'Demo mode: the form works but is not connected to email/WhatsApp yet, so nothing was sent.', false);
         } else if (mode === 'mailto') {
           showNote(cfNote, 'Your email app is opening with your message ready. Please press Send there. If nothing opens, email us at ' + CONFIG.mailto + '.', true);
+          contactForm.reset();
         } else {
           showNote(cfNote, 'Thank you! Your message has been sent. We will get back to you shortly.', true);
           contactForm.reset();
