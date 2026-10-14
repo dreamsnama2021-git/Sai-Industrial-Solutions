@@ -9,7 +9,10 @@
      If both are empty the forms run in DEMO mode: nothing is sent, the
      payload is only logged to the browser console.
      ------------------------------------------------------------------ */
-  var CONFIG = { endpoint: '', whatsapp: '', mailto: 'mail@s-industrialsolutions.com', web3formsKey: '' };
+  var CONFIG = { endpoint: '', whatsapp: '', mailto: 'mail@s-industrialsolutions.com', web3formsKey: '', formsubmit: 'mail@s-industrialsolutions.com' };
+  /* formsubmit : no signup/key needed (formsubmit.co). Forms are emailed straight to this address.
+                  The FIRST submission ever sends a one-time "activate this form" email to it; click
+                  the link once and every later enquiry arrives in the inbox. Clear it to disable. */
   /* web3formsKey : free access key from https://web3forms.com (sent to the inbox you register).
                     When set, enquiry/contact forms are delivered straight to that inbox with no
                     email app needed; when empty, the forms fall back to opening the visitor's
@@ -161,6 +164,26 @@
         body: JSON.stringify(body)
       }).then(function (r) { return r.json(); }).then(function (j) {
         if (!j || !j.success) throw new Error((j && j.message) || 'send failed');
+        return 'sent';
+      });
+    }
+    if (CONFIG.formsubmit) {
+      var fsContact = payload.type === 'contact';
+      var fsBody = {
+        _subject: (fsContact ? 'Website message' : 'Website enquiry') + ' - ' + payload.name,
+        _template: 'table',
+        _captcha: 'false',
+        name: payload.name,
+        phone: payload.phone,
+        message: summary
+      };
+      if (payload.email) { fsBody.email = payload.email; fsBody._replyto = payload.email; }
+      return fetch('https://formsubmit.co/ajax/' + CONFIG.formsubmit, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(fsBody)
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        if (!j || (j.success !== true && j.success !== 'true')) throw new Error((j && j.message) || 'send failed');
         return 'sent';
       });
     }
