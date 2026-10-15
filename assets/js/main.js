@@ -143,6 +143,13 @@
   });
 
   function send(payload, summary) {
+    function viaMailto() {
+      var subject = payload.type === 'contact'
+        ? 'Website message' + (payload.subject ? ': ' + payload.subject : '') + ' - ' + payload.name
+        : 'Website enquiry' + ((payload.productName || payload.product) ? ': ' + (payload.productName || payload.product) : '') + ' - ' + payload.name;
+      window.location.href = 'mailto:' + CONFIG.mailto + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(summary);
+      return Promise.resolve('mailto');
+    }
     if (CONFIG.endpoint) {
       return fetch(CONFIG.endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return 'sent'; });
@@ -185,15 +192,13 @@
       }).then(function (r) { return r.json(); }).then(function (j) {
         if (!j || (j.success !== true && j.success !== 'true')) throw new Error((j && j.message) || 'send failed');
         return 'sent';
+      }).catch(function (err) {
+        // delivery service unavailable / not activated yet: never lose the enquiry, open the visitor's email app instead
+        console.warn('[SIS] FormSubmit failed, falling back to the email app:', err && err.message);
+        return viaMailto();
       });
     }
-    if (CONFIG.mailto) {
-      var subject = payload.type === 'contact'
-        ? 'Website message' + (payload.subject ? ': ' + payload.subject : '') + ' - ' + payload.name
-        : 'Website enquiry' + ((payload.productName || payload.product) ? ': ' + (payload.productName || payload.product) : '') + ' - ' + payload.name;
-      window.location.href = 'mailto:' + CONFIG.mailto + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(summary);
-      return Promise.resolve('mailto');
-    }
+    if (CONFIG.mailto) return viaMailto();
     if (CONFIG.whatsapp) {
       window.open('https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(summary), '_blank', 'noopener');
       return Promise.resolve('whatsapp');
