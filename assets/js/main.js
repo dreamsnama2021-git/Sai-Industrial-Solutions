@@ -447,6 +447,199 @@
     }
   }
 
+  /* ---------- Chat assistant: built-in FAQ bot (no external service, nothing is sent anywhere) ---------- */
+  (function initChatBot() {
+    if ($('#chatBot')) return;
+    var PHONE_1 = '+971502008078', PHONE_2 = '+971503842949';
+    var EMAIL = 'mail@s-industrialsolutions.com';
+    var WA = 'https://wa.me/971508964745?text=' + encodeURIComponent('Hi, I would like to know more about your products.');
+    var CATS = [
+      { id: 'pulleys-belts', name: 'Pulleys, Bushes & Belts', ex: 'Taper Lock, Pilot Bore, Timing Belt and Wire Rope pulleys, V belts, timing and conveyor belts, taper lock and QD bushes',
+        kw: ['pulley', 'belt', 'bush', 'timing', 'conveyor', 'taper lock', 'qd '] },
+      { id: 'couplings', name: 'Couplings', ex: 'Disc, Flexible, Gear, Pin & Bush, Jaw, HRC, Rotex, Grid and Tyre couplings',
+        kw: ['coupling', 'gear coupling', 'jaw', 'rotex', 'hrc', 'sureflex', 'disc coupling', 'tyre', 'grid'] },
+      { id: 'motors-gearbox', name: 'Motors & Gear Box', ex: 'foot and flange mounted motors, shaft mounted and flange mounted gearboxes',
+        kw: ['motor', 'gearbox', 'gear box', 'shaft mounted', 'flange mounted', 'worm gearbox', 'reducer'] },
+      { id: 'sprockets-chains', name: 'Sprockets & Chains', ex: 'simple, duplex and triplex sprockets, roller and attachment chains',
+        kw: ['sprocket', 'chain', 'duplex', 'triplex', 'roller chain'] },
+      { id: 'gears-shafts', name: 'Gears & Shafts', ex: 'helical, spur, worm and spiral bevel gears, pinion and rack, spline and machine shafts',
+        kw: ['gear', 'shaft', 'spline', 'rack', 'pinion', 'worm', 'bevel', 'spur', 'helical', 'herringbone'] },
+      { id: 'seals-rubber', name: 'Seals & Customised Rubber Products', ex: 'mechanical seals, oil seals, O rings, V rings, seal kits, rubber mounts and rubber impellers',
+        kw: ['seal', 'o ring', 'o-ring', 'oring', 'rubber', 'viton', 'nbr', 'v ring', 'mount', 'impeller', 'gasket'] },
+      { id: 'fasteners', name: 'Fasteners', ex: 'bolts, nuts, washers, studs, U bolts, eye bolts and circlips',
+        kw: ['bolt', 'nut', 'washer', 'stud', 'screw', 'fastener', 'circlip', 'u bolt', 'eye bolt'] },
+      { id: 'metals', name: 'Ferrous & Non-Ferrous Metals', ex: 'angle, flat, hexagon, round and square bars, sheets and nylon bushes and sheets',
+        kw: ['metal', 'steel', 'stainless', 'bar', 'sheet', 'angle', 'nylon', 'ferrous', 'aluminium', 'aluminum', 'brass', 'copper'] }
+    ];
+
+    function fmt(p) { return p.replace(/^\+971(\d{2})(\d{3})(\d{4})$/, '+971 $1 $2 $3'); }
+    function norm(s) { return ' ' + String(s).toLowerCase().replace(/[^a-z0-9ऀ-ॿ&\- ]+/g, ' ').replace(/\s+/g, ' ').trim() + ' '; }
+    function has(t, words) { for (var i = 0; i < words.length; i++) { if (t.indexOf(words[i]) !== -1) return true; } return false; }
+
+    function findCategory(t) {
+      var best = null, bestScore = 0;
+      CATS.forEach(function (c) {
+        var score = 0;
+        c.kw.forEach(function (k) { if (t.indexOf(k) !== -1) score += k.length; });
+        if (score > bestScore) { bestScore = score; best = c; }
+      });
+      return best;
+    }
+
+    var MAIN_CHIPS = [
+      { label: 'Our products', q: 'products' },
+      { label: 'Get a quote', q: 'quote' },
+      { label: 'Services', q: 'services' },
+      { label: 'Contact & hours', q: 'contact' },
+      { label: 'WhatsApp', type: 'link', href: WA, ext: true }
+    ];
+    var HELP_BTNS = [
+      { label: 'Send an enquiry', type: 'enquire' },
+      { label: 'WhatsApp us', type: 'link', href: WA, ext: true },
+      { label: 'Call ' + fmt(PHONE_1), type: 'link', href: 'tel:' + PHONE_1 }
+    ];
+
+    function reply(text) {
+      var t = norm(text);
+      var cat = findCategory(t);
+      if (cat) {
+        return {
+          text: 'Yes, we supply ' + cat.name + ': ' + cat.ex + '. For price and availability please send us the size, quantity and brand and we will send a quote.',
+          buttons: [
+            { label: 'View ' + cat.name, type: 'link', href: 'products.html#' + cat.id },
+            { label: 'Get a quote', type: 'enquire', product: cat.name }
+          ]
+        };
+      }
+      if (has(t, [' hi ', ' hello ', ' hey ', ' hii ', 'namaste', 'namaskar', 'good morning', 'good afternoon', 'good evening', 'salam', 'assalam'])) {
+        return { text: 'Hello! Welcome to Sai Industrial Solutions. How can I help you today?', buttons: MAIN_CHIPS };
+      }
+      if (has(t, [' thanks', ' thank you', 'shukriya', 'dhanyavad', ' thx '])) {
+        return { text: 'You are welcome! Is there anything else I can help you with?', buttons: MAIN_CHIPS };
+      }
+      if (has(t, ['hour', 'timing', 'open', 'close', 'working', 'kab', 'samay', 'sunday'])) {
+        return { text: 'We are open Monday to Saturday, 9:00 to 18:30. You can also send an enquiry any time and we will reply on the next working day.', buttons: [{ label: 'Send an enquiry', type: 'enquire' }, { label: 'WhatsApp us', type: 'link', href: WA, ext: true }] };
+      }
+      if (has(t, ['address', 'location', 'where', 'office', 'map', 'visit', 'kahan', 'pata', 'sharjah'])) {
+        return { text: 'Our address: Sharjah Media City, Sharjah, UAE.', buttons: [{ label: 'Open the map', type: 'link', href: 'contact.html' }, { label: 'Open in Google Maps', type: 'link', href: 'https://www.google.com/maps/search/?api=1&query=Sharjah+Media+City+Sharjah+UAE', ext: true }] };
+      }
+      if (has(t, ['phone', 'call', 'number', 'contact', 'email', 'mail', 'talk', 'speak', 'baat', 'sampark'])) {
+        return { text: 'You can reach us on ' + fmt(PHONE_1) + ' or ' + fmt(PHONE_2) + ', or by email at ' + EMAIL + '. We are available Mon to Sat, 9:00 to 18:30.',
+          buttons: [{ label: 'Call now', type: 'link', href: 'tel:' + PHONE_1 }, { label: 'WhatsApp us', type: 'link', href: WA, ext: true }, { label: 'Email us', type: 'link', href: 'mailto:' + EMAIL }] };
+      }
+      if (has(t, ['whatsapp', 'whats app', 'wa.me'])) {
+        return { text: 'Sure, you can chat with our team on WhatsApp.', buttons: [{ label: 'Open WhatsApp', type: 'link', href: WA, ext: true }] };
+      }
+      if (has(t, ['quote', 'quotation', 'price', 'rate', 'cost', 'enquiry', 'inquiry', 'order', 'buy', 'purchase', 'kimat', 'daam', 'bhav', 'kharid'])) {
+        return { text: 'Prices depend on the size, quantity and brand. Tell us what you need through the enquiry form and our team will reply with the right solution and the best quote.', buttons: [{ label: 'Send an enquiry', type: 'enquire' }, { label: 'WhatsApp us', type: 'link', href: WA, ext: true }] };
+      }
+      if (has(t, ['service', 'sourcing', 'support', 'supply', 'custom', 'manufactur', 'technical', 'help me choose'])) {
+        return { text: 'We offer three services: Custom Sourcing (share the specification and we source or manufacture it), Industrial Supply (stock for regular and bulk needs) and Technical Support (help choosing the right product).', buttons: [{ label: 'See our services', type: 'link', href: 'services.html' }, { label: 'Send an enquiry', type: 'enquire' }] };
+      }
+      if (has(t, ['deliver', 'dispatch', 'shipping', 'shipment', 'courier', 'how long'])) {
+        return { text: 'Once your quote is confirmed we arrange delivery. Please share your location and quantity in the enquiry so we can confirm the timing.', buttons: [{ label: 'Send an enquiry', type: 'enquire' }] };
+      }
+      if (has(t, ['brand', 'skf', 'fag', 'timken', 'gates', 'ntn', 'nsk', 'bosch', 'abb', 'genuine', 'original', 'quality'])) {
+        return { text: 'We stock, trade and supply genuine parts from leading global manufacturers such as SKF, FAG, Timken, Gates, NTN, NSK, Bosch, ABB and more. Tell us the brand you need.', buttons: [{ label: 'Send an enquiry', type: 'enquire' }] };
+      }
+      if (has(t, ['about', 'who are you', 'company', 'since', 'stockist', 'trader', 'kaun'])) {
+        return { text: 'Sai Industrial Solutions is a stockist, trader and customised manufacturer of power transmission products and precision-engineered components, serving industries across the UAE.', buttons: [{ label: 'About us', type: 'link', href: 'about.html' }, { label: 'Our products', type: 'ask', q: 'products' }] };
+      }
+      if (has(t, ['product', 'catalog', 'categor', 'item', 'what do you', 'what you', 'kya milta', 'range', 'sell'])) {
+        return { text: 'We have 8 product categories. Tap one to see the products, or type the item you need.',
+          buttons: CATS.map(function (c) { return { label: c.name, type: 'link', href: 'products.html#' + c.id }; }) };
+      }
+      return { text: 'Sorry, I could not find an answer to that. Our team can help you directly:', buttons: HELP_BTNS };
+    }
+
+    /* ----- UI ----- */
+    var ICON_CHAT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>';
+    var ICON_CLOSE = '<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+    var ICON_SEND = '<svg viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+
+    var root = document.createElement('div');
+    root.id = 'chatBot';
+    root.innerHTML =
+      '<button class="chatbot__launcher" id="chatLauncher" type="button" aria-label="Open chat assistant" aria-expanded="false" aria-controls="chatPanel">' + ICON_CHAT + '</button>' +
+      '<section class="chatbot__panel" id="chatPanel" role="dialog" aria-label="Sai Assistant chat" hidden>' +
+        '<header class="chatbot__head"><span class="chatbot__avatar">' + ICON_CHAT + '</span>' +
+          '<div><strong>Sai Assistant</strong><small>Ask about products, quotes and contact</small></div>' +
+          '<button class="chatbot__close" id="chatClose" type="button" aria-label="Close chat">' + ICON_CLOSE + '</button></header>' +
+        '<div class="chatbot__log" id="chatLog" role="log" aria-live="polite"></div>' +
+        '<form class="chatbot__form" id="chatForm" autocomplete="off">' +
+          '<label class="sr-only" for="chatInput">Type your question</label>' +
+          '<input id="chatInput" type="text" placeholder="Type your question…" maxlength="200">' +
+          '<button type="submit" aria-label="Send">' + ICON_SEND + '</button></form>' +
+      '</section>';
+    document.body.appendChild(root);
+
+    var launcher = $('#chatLauncher'), panel = $('#chatPanel'), log = $('#chatLog'), form = $('#chatForm'), input = $('#chatInput');
+    var started = false;
+
+    function scrollDown() { log.scrollTop = log.scrollHeight; }
+    function addUser(text) {
+      var d = document.createElement('div'); d.className = 'chatbot__msg chatbot__msg--user'; d.textContent = text; log.appendChild(d); scrollDown();
+    }
+    function makeButton(b) {
+      var el;
+      if (b.type === 'link') {
+        el = document.createElement('a'); el.href = b.href;
+        if (b.ext) { el.target = '_blank'; el.rel = 'noopener'; }
+      } else {
+        el = document.createElement('button'); el.type = 'button';
+        if (b.type === 'enquire') { el.setAttribute('data-enquire', ''); if (b.product) el.setAttribute('data-product', b.product); }
+        if (b.type === 'ask') { el.addEventListener('click', function () { ask(b.label, b.q); }); }
+      }
+      el.className = 'chatbot__chip';
+      el.textContent = b.label;
+      if (b.q && b.type !== 'ask' && b.type !== 'link' && b.type !== 'enquire') { el.addEventListener('click', function () { ask(b.label, b.q); }); }
+      el.addEventListener('click', function () { if (b.type === 'enquire' || (b.type === 'link' && !b.ext && b.href.indexOf('tel:') !== 0 && b.href.indexOf('mailto:') !== 0)) setOpen(false); });
+      return el;
+    }
+    function addBot(text, buttons, delay) {
+      var typing = document.createElement('div'); typing.className = 'chatbot__msg chatbot__msg--bot chatbot__typing'; typing.innerHTML = '<i></i><i></i><i></i>'; log.appendChild(typing); scrollDown();
+      setTimeout(function () {
+        log.removeChild(typing);
+        var d = document.createElement('div'); d.className = 'chatbot__msg chatbot__msg--bot';
+        var p = document.createElement('p'); p.textContent = text; d.appendChild(p);
+        if (buttons && buttons.length) {
+          var wrap = document.createElement('div'); wrap.className = 'chatbot__chips';
+          buttons.forEach(function (b) { wrap.appendChild(makeButton(b)); });
+          d.appendChild(wrap);
+        }
+        log.appendChild(d); scrollDown();
+      }, delay == null ? 450 : delay);
+    }
+    function ask(label, q) {
+      addUser(label);
+      var r = reply(q || label);
+      addBot(r.text, r.buttons);
+    }
+    function setOpen(open) {
+      panel.hidden = !open;
+      root.classList.toggle('is-open', open);
+      launcher.setAttribute('aria-expanded', String(open));
+      launcher.setAttribute('aria-label', open ? 'Close chat assistant' : 'Open chat assistant');
+      if (open) {
+        if (!started) {
+          started = true;
+          addBot('Hi! I am Sai Assistant. How can I help you today? You can ask in English or Hindi (Hinglish).', MAIN_CHIPS, 250);
+        }
+        setTimeout(function () { if (window.innerWidth > 767) input.focus(); }, 50);
+      }
+    }
+    launcher.addEventListener('click', function () { setOpen(panel.hidden); });
+    $('#chatClose').addEventListener('click', function () { setOpen(false); launcher.focus(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { setOpen(false); launcher.focus(); } });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = input.value.trim();
+      if (!v) return;
+      input.value = '';
+      ask(v);
+    });
+  })();
+
   /* ---------- Back-to-top button ---------- */
   var backTop = $('#backTop');
   if (backTop) {
