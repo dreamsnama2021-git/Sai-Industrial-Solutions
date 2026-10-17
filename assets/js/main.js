@@ -177,14 +177,27 @@
     if (CONFIG.formsubmit) {
       var fsContact = payload.type === 'contact';
       var fsBody = {
-        _subject: (fsContact ? 'Website message' : 'Website enquiry') + ' - ' + payload.name,
+        _subject: (fsContact ? 'Website message' : 'Website enquiry') + ((!fsContact && (payload.productName || payload.product)) ? ': ' + (payload.productName || payload.product) : '') + ' - ' + payload.name,
         _template: 'table',
-        _captcha: 'false',
-        name: payload.name,
-        phone: payload.phone,
-        message: summary
+        _captcha: 'false'
       };
-      if (payload.email) { fsBody.email = payload.email; fsBody._replyto = payload.email; }
+      // one clean row per field (empty fields are left out)
+      function put(k, v) { if (v) fsBody[k] = v; }
+      put('Name', payload.name);
+      put('Phone', payload.phone);
+      put('Email', payload.email);
+      if (fsContact) {
+        put('Subject', payload.subject);
+        put('Message', payload.message);
+      } else {
+        put('Company', payload.company);
+        put('Category', payload.product);
+        put('Item', payload.productName);
+        put('Quantity', payload.quantity);
+        put('Details', payload.message);
+      }
+      put('Page', payload.page);
+      if (payload.email) fsBody._replyto = payload.email;
       return fetch('https://formsubmit.co/ajax/' + CONFIG.formsubmit, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
