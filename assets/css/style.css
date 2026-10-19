@@ -1064,8 +1064,20 @@ button { font: inherit; color: inherit; }
   .chatbot__launcher { left: 14px; bottom: 30px; width: 52px; height: 52px; }
   .chatbot__panel { left: 10px; right: 10px; bottom: 92px; width: auto; max-width: none; height: min(70vh, 520px); }
 }
-/* products page "Categories" button shares the bottom-left corner on tablet/phone: lift it above the chat button */
-@media (max-width: 991px) {
-  .cat-fab { bottom: 96px; }
-  .cat-side { bottom: 150px; }
+
+/* ---------- WhatsApp greeting bubble ---------- */
+.wa-bubble {
+  position: fixed; right: 92px; bottom: 74px; z-index: 61; max-width: 240px; display: flex; align-items: flex-start; gap: 6px;
+  padding: 12px 8px 12px 14px; background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 14px 14px 4px 14px;
+  box-shadow: 0 12px 30px rgba(0, 17, 52, .22); opacity: 0; transform: translateY(8px);
+  transition: opacity .35s ease, transform .35s ease;
 }
+.wa-bubble[hidden] { display: none; }
+.wa-bubble.is-in { opacity: 1; transform: none; }
+.wa-bubble__link { display: block; color: inherit; }
+.wa-bubble__link strong { display: block; font: 500 calc(15px * var(--fs))/1.25 var(--font-head); color: var(--ink); }
+.wa-bubble__link span { display: block; margin-top: 3px; font-size: calc(12px * var(--fs)); color: #1a9a4a; font-weight: 500; }
+.wa-bubble__close { flex: none; width: 24px; height: 24px; border: 0; border-radius: 50%; background: transparent; color: var(--text); font-size: 18px; line-height: 1; cursor: pointer; }
+.wa-bubble__close:hover { background: var(--bg-2); }
+@media (max-width: 767px) { .wa-bubble { right: 84px; bottom: 76px; max-width: 200px; } }
+@media (prefers-reduced-motion: reduce) { .wa-bubble { transition: none; } }

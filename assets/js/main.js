@@ -460,9 +460,33 @@
     }
   }
 
+  /* ---------- WhatsApp greeting bubble: a friendly prompt next to the WhatsApp button ---------- */
+  (function initWaBubble() {
+    var wa = $('.whatsapp-float');
+    if (!wa) return;
+    var KEY = 'sisWaBubbleClosed';
+    try { if (sessionStorage.getItem(KEY)) return; } catch (e) { /* storage blocked: just show it */ }
+    var bubble = document.createElement('div');
+    bubble.className = 'wa-bubble';
+    bubble.hidden = true;
+    bubble.innerHTML =
+      '<a class="wa-bubble__link" target="_blank" rel="noopener"><strong>Hello, How may I help you?</strong><span>Chat with us on WhatsApp</span></a>' +
+      '<button class="wa-bubble__close" type="button" aria-label="Dismiss">&times;</button>';
+    bubble.querySelector('a').href = wa.href;
+    document.body.appendChild(bubble);
+    function close() {
+      bubble.hidden = true;
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) { /* ignore */ }
+    }
+    bubble.querySelector('button').addEventListener('click', close);
+    bubble.querySelector('a').addEventListener('click', close);
+    setTimeout(function () { bubble.hidden = false; bubble.classList.add('is-in'); }, 3500);
+  })();
+
   /* ---------- Chat assistant: built-in FAQ bot (no external service, nothing is sent anywhere) ---------- */
+  var ENABLE_WEB_CHAT = false; // the on-site FAQ bot is switched off: chat now happens on WhatsApp (see the greeting bubble below)
   (function initChatBot() {
-    if ($('#chatBot')) return;
+    if (!ENABLE_WEB_CHAT || $('#chatBot')) return;
     var PHONE_1 = '+971502008078', PHONE_2 = '+971503842949';
     var EMAIL = 'mail@s-industrialsolutions.com';
     var WA = 'https://wa.me/971508964745?text=' + encodeURIComponent('Hi, I would like to know more about your products.');
