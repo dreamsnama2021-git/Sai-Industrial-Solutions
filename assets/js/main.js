@@ -460,12 +460,21 @@
     }
   }
 
-  /* ---------- WhatsApp greeting bubble: a friendly prompt next to the WhatsApp button ---------- */
+  /* ---------- WhatsApp greeting bubble: appears first after ~3.5 s, then again every 5-10 minutes ---------- */
   (function initWaBubble() {
     var wa = $('.whatsapp-float');
     if (!wa) return;
-    var KEY = 'sisWaBubbleClosed';
-    try { if (sessionStorage.getItem(KEY)) return; } catch (e) { /* storage blocked: just show it */ }
+    var KEY = 'sisWaBubbleNext';
+    var FIRST = 3500, MIN = 5 * 60 * 1000, MAX = 10 * 60 * 1000, VISIBLE = 15000;
+    var memNext = 0, showTimer = null, hideTimer = null;
+    function getNext() {
+      try { var v = parseInt(localStorage.getItem(KEY), 10); if (!isNaN(v)) return v; } catch (e) { /* storage blocked */ }
+      return memNext;
+    }
+    function setNext(t) {
+      memNext = t;
+      try { localStorage.setItem(KEY, String(t)); } catch (e) { /* storage blocked */ }
+    }
     var bubble = document.createElement('div');
     bubble.className = 'wa-bubble';
     bubble.hidden = true;
@@ -474,13 +483,28 @@
       '<button class="wa-bubble__close" type="button" aria-label="Dismiss">&times;</button>';
     bubble.querySelector('a').href = wa.href;
     document.body.appendChild(bubble);
-    function close() {
+    function hide() {
+      clearTimeout(hideTimer);
+      bubble.classList.remove('is-in');
       bubble.hidden = true;
-      try { sessionStorage.setItem(KEY, '1'); } catch (e) { /* ignore */ }
     }
-    bubble.querySelector('button').addEventListener('click', close);
-    bubble.querySelector('a').addEventListener('click', close);
-    setTimeout(function () { bubble.hidden = false; bubble.classList.add('is-in'); }, 3500);
+    function schedule() {
+      clearTimeout(showTimer);
+      var next = getNext();
+      var wait = next > Date.now() ? Math.max(next - Date.now(), FIRST) : FIRST;
+      showTimer = setTimeout(show, wait);
+    }
+    function show() {
+      bubble.hidden = false;
+      setTimeout(function () { bubble.classList.add('is-in'); }, 20);
+      setNext(Date.now() + MIN + Math.floor(Math.random() * (MAX - MIN)));
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(hide, VISIBLE);
+      schedule(); // comes back after the next 5-10 minute gap
+    }
+    bubble.querySelector('button').addEventListener('click', hide);
+    bubble.querySelector('a').addEventListener('click', hide);
+    schedule();
   })();
 
   /* ---------- Chat assistant: built-in FAQ bot (no external service, nothing is sent anywhere) ---------- */
